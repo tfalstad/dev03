@@ -2,14 +2,12 @@ name = "dev03"
 type = "javascript"
 account_id = "ef0034d5b5a3e9838c877e31094e3251"
 workers_dev = true
-route = ""
-zone_id = ""
 
 [site]
-bucket = "./.next"
+bucket = "./out"
 
 [build]
 command = "npm run build"
+upload.format = "service-worker"
 
-# Move the pages_build_output_dir to the root level
-pages_build_output_dir = ".next"
+pages_build_output_dir = "./out"
