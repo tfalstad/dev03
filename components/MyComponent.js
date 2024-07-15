@@ -18,19 +18,19 @@ const MyComponent = () => {
                         <div className="col-span-1 lg:col-span-1">
                             <div className="w-20 p-4 bg-white rounded-xl shadow-lg flex flex-col items-center space-y-5">
                                 <Link href="https://www.travisfalstad.com/contact" target="_blank" rel="noopener noreferrer">
-                                    <div className="text-black">
+                                    <div className="text-black flex justify-center">
                                         <Image src="/images/message.png" alt="Mail" width={24} height={24} />
                                     </div>
                                 </Link>
                                 <div className="border-b border-gray-300 w-full my-2"></div>
                                 <Link href="https://calendar.app.google/zRMChYvy5bevvemw9" target="_blank" rel="noopener noreferrer">
-                                    <div className="text-black">
+                                    <div className="text-black flex justify-center">
                                         <Image src="/images/meet.png" alt="Meet" width={24} height={24} />
                                     </div>
                                 </Link>
                                 <div className="border-b border-gray-300 w-full my-2"></div>
                                 <Link href="https://www.linkedin.com/in/tfalstad/" target="_blank" rel="noopener noreferrer">
-                                    <div className="text-black">
+                                    <div className="text-black flex justify-center">
                                         <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} />
                                     </div>
                                 </Link>
@@ -40,7 +40,7 @@ const MyComponent = () => {
                         {/* Portfolio card */}
                         <div className="col-span-1 lg:col-span-2">
                             <a href="https://travisfalstad.com" target="_blank" rel="noopener noreferrer">
-                                <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg flex justify-between items-center">
+                                <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg flex justify-between items-center hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                                     <div className="flex items-center space-x-4">
                                         <div className="w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center text-fuchsia-50 font-medium">P</div>
                                         <div>
@@ -56,7 +56,7 @@ const MyComponent = () => {
                         {/* Mixta RE and Adaptable Human cards */}
                         <div className="col-span-1 lg:col-span-2 flex flex-col space-y-4">
                             <a href="https://mixtareinc.com" target="_blank" rel="noopener noreferrer">
-                                <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg">
+                                <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                                     <div className="flex items-center space-x-4">
                                         <div className="w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center text-fuchsia-50 font-medium">M</div>
                                         <div>
@@ -70,7 +70,7 @@ const MyComponent = () => {
                                     <p className="mt-2 text-gray-600">Partnering with Dr. Jeanine A. DeFalco, PhD to pioneer the future of education and training excellence by merging evidence-driven adaptive designs with AI/ML.</p>
                                 </div>
                             </a>
-                            <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg">
+                            <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                                 <div className="flex items-center space-x-4">
                                     <div className="w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center text-fuchsia-50 font-medium">A</div>
                                     <div>
