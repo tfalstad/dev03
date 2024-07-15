@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Wrangler.toml removed upload.format and moved pages_build_to_output_dir to root level">
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Simplified wrangler.toml">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wrangler.toml" beforeDir="false" afterPath="$PROJECT_DIR$/wrangler.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +100,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721072603082</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="next.config.mjs:&#10;&#10;Adds the output: 'export' property to ensure Next.js exports the site as static files into the out directory.&#10;wrangler.toml:&#10;&#10;bucket and pages_build_output_dir point to ./out.&#10;command is set to &quot;npm run build&quot; to ensure the build process is correctly triggered.">
+      <option name="closed" value="true" />
+      <created>1721072893422</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721072893422</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Simplified wrangler.toml">
+      <option name="closed" value="true" />
+      <created>1721073019755</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721073019755</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +141,8 @@
     <MESSAGE value="This is everything - first commit I think" />
     <MESSAGE value="Final version (for now)" />
     <MESSAGE value="Wrangler.toml removed upload.format and moved pages_build_to_output_dir to root level" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrangler.toml removed upload.format and moved pages_build_to_output_dir to root level" />
+    <MESSAGE value="next.config.mjs:&#10;&#10;Adds the output: 'export' property to ensure Next.js exports the site as static files into the out directory.&#10;wrangler.toml:&#10;&#10;bucket and pages_build_output_dir point to ./out.&#10;command is set to &quot;npm run build&quot; to ensure the build process is correctly triggered." />
+    <MESSAGE value="Simplified wrangler.toml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplified wrangler.toml" />
   </component>
 </project>

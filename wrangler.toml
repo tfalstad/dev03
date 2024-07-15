@@ -7,7 +7,8 @@ workers_dev = true
 bucket = "./out"
 
 [build]
-command = "npm run build"
+command = "npm run build && npm run export"
 upload.format = "service-worker"
 
-pages_build_output_dir = "./out"
+[env.production]
+pages_build_output_dir = "out"
