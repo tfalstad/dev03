@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Final version (for now)">
-      <change afterPath="$PROJECT_DIR$/wrangler.toml" afterDir="false" />
-    </list>
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Added wrangler.toml file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720989080788</updated>
-      <workItem from="1720989081841" duration="23123000" />
+      <workItem from="1720989081841" duration="23463000" />
     </task>
     <task id="LOCAL-00001" summary="This is everything - first commit I think">
       <option name="closed" value="true" />
@@ -87,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721060360218</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added wrangler.toml file">
+      <option name="closed" value="true" />
+      <created>1721070991825</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721070991825</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +106,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="This is everything - first commit I think" />
     <MESSAGE value="Final version (for now)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final version (for now)" />
+    <MESSAGE value="Added wrangler.toml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added wrangler.toml file" />
   </component>
 </project>
