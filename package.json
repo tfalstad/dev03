@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export" // Ensure this line exists
   },
   "dependencies": {
     "@eslint/config-array": "^0.17.0",
