@@ -1,0 +1,9 @@
+name = "dev03"
+type = "javascript"
+account_id = "ef0034d5b5a3e9838c877e31094e3251"  # Your account ID from Cloudflare
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./.next"
