@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="hopefully last try">
-      <change beforePath="$PROJECT_DIR$/wrangler.toml" beforeDir="false" />
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="OMG not another commit">
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
@@ -129,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721074816804</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="OMG not another commit">
+      <option name="closed" value="true" />
+      <created>1721075249759</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721075249759</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +167,7 @@
     <MESSAGE value="Build Command: Set to npm run build &amp;&amp; npm run export.&#10;Build Output Directory: Set to out." />
     <MESSAGE value="Simplified wrangler.toml" />
     <MESSAGE value="hopefully last try" />
-    <option name="LAST_COMMIT_MESSAGE" value="hopefully last try" />
+    <MESSAGE value="OMG not another commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="OMG not another commit" />
   </component>
 </project>
