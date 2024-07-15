@@ -7,3 +7,13 @@ zone_id = ""
 
 [site]
 bucket = "./.next"
+
+[build]
+command = "npm run build"
+upload.format = "service-worker"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+pages_build_output_dir = ".next"
