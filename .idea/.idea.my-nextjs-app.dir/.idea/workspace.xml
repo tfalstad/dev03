@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="I'm still here - I can't believe it either">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Changed 'name' in package.json" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +23,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package-lock.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/tfalstad/Projects/03/my-nextjs-app/package.json" root0="FORCE_HIGHLIGHTING" />
@@ -154,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721076265606</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changed 'name' in package.json">
+      <option name="closed" value="true" />
+      <created>1721154948617</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1721154948618</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +193,7 @@
     <MESSAGE value="OMG not another commit" />
     <MESSAGE value="I have not given up yet" />
     <MESSAGE value="I'm still here - I can't believe it either" />
-    <option name="LAST_COMMIT_MESSAGE" value="I'm still here - I can't believe it either" />
+    <MESSAGE value="Changed 'name' in package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed 'name' in package.json" />
   </component>
 </project>
