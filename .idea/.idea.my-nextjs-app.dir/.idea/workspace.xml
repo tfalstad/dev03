@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="OMG so many changes" />
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="asdf" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -233,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721160923750</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="asdf">
+      <option name="closed" value="true" />
+      <created>1721163078947</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1721163078947</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,9 +280,9 @@
     <MESSAGE value="change" />
     <MESSAGE value="more changes oh boy" />
     <MESSAGE value="Test removing forward slash on background" />
-    <MESSAGE value="asdf" />
     <MESSAGE value="In next.config.mjs, we've added assetPrefix: '.' to help resolve asset paths correctly.&#10;We've split the component into two files: index.js (or your main page file) and MyComponent.js.&#10;In index.js, we've added getStaticProps to generate the image paths. This function runs at build time and provides the paths to the component as props.&#10;In MyComponent.js, we've modified it to accept imagePaths as a prop and use these paths for all the images." />
     <MESSAGE value="OMG so many changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="OMG so many changes" />
+    <MESSAGE value="asdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="asdf" />
   </component>
 </project>
