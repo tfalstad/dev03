@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Changed Image source tags. &#10;Confirmed next.config.mjs is correct.">
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="change">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721156285926</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="change">
+      <option name="closed" value="true" />
+      <created>1721157040076</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721157040076</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +231,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="I didn't change anything." />
     <MESSAGE value="Changed Image source tags. &#10;Confirmed next.config.mjs is correct." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Image source tags. &#10;Confirmed next.config.mjs is correct." />
+    <MESSAGE value="change" />
+    <option name="LAST_COMMIT_MESSAGE" value="change" />
   </component>
 </project>

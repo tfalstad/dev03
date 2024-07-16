@@ -1,20 +1,20 @@
 {
-  "name": "falstad.dev",
+  "name": "my-nextjs-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@eslint/config-array": "^0.17.0",
-    "@eslint/object-schema": "^2.1.4",
-    "glob": "^11.0.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "@eslint/config-array": "^0.17.0",
+    "@eslint/object-schema": "^2.1.4",
+    "glob": "^11.0.0",
     "rimraf": "^6.0.1"
   },
   "devDependencies": {
