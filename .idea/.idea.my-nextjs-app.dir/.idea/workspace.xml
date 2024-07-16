@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="more changes oh boy">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="Test removing forward slash on background" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721158022642</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Test removing forward slash on background">
+      <option name="closed" value="true" />
+      <created>1721159514901</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1721159514901</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +247,7 @@
     <MESSAGE value="Changed Image source tags. &#10;Confirmed next.config.mjs is correct." />
     <MESSAGE value="change" />
     <MESSAGE value="more changes oh boy" />
-    <option name="LAST_COMMIT_MESSAGE" value="more changes oh boy" />
+    <MESSAGE value="Test removing forward slash on background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test removing forward slash on background" />
   </component>
 </project>
