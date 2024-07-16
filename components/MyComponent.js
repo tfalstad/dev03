@@ -8,7 +8,7 @@ const MyComponent = () => {
         <div className="relative bg-white min-h-screen">
             {/* Using img tag for static image loading */}
             <div className="absolute top-0 left-0 w-full h-full">
-                <img src="/images/background.png" alt="Background" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                <img src="images/background.png" alt="Background" style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
             </div>
             <div className="relative z-10 flex items-center justify-center min-h-screen">
                 <div className="max-w-7xl p-4 w-full">
