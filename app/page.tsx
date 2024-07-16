@@ -1,7 +1,7 @@
 import MyComponent from '../components/MyComponent';
 
 export default function Home() {
-    return <MyComponent imagePaths={{
+    const imagePaths = {
         background: '/images/background.png',
         message: '/images/message.png',
         meet: '/images/meet.png',
@@ -9,5 +9,7 @@ export default function Home() {
         portfolio: '/images/portfolio.png',
         mixtaRe: '/images/mixta-re.png',
         adaptableHuman: '/images/adaptable-human.png',
-    }} />;
+    };
+
+    return <MyComponent imagePaths={imagePaths} />;
 }

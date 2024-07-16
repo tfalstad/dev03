@@ -6,7 +6,7 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    assetPrefix: '.',
+    assetPrefix: '/', // Change this from '.' to '/'
     // any other configurations you have
 }
 

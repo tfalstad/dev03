@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="asdf">
+    <list default="true" id="7c6afb92-a521-4cbb-b936-e22ca3d7e51a" name="Changes" comment="In next.config.mjs, we've added assetPrefix: '.' to help resolve asset paths correctly.&#10;We've split the component into two files: index.js (or your main page file) and MyComponent.js.&#10;In index.js, we've added getStaticProps to generate the image paths. This function runs at build time and provides the paths to the component as props.&#10;In MyComponent.js, we've modified it to accept imagePaths as a prop and use these paths for all the images.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.my-nextjs-app.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MyComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MyComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721159857860</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="In next.config.mjs, we've added assetPrefix: '.' to help resolve asset paths correctly.&#10;We've split the component into two files: index.js (or your main page file) and MyComponent.js.&#10;In index.js, we've added getStaticProps to generate the image paths. This function runs at build time and provides the paths to the component as props.&#10;In MyComponent.js, we've modified it to accept imagePaths as a prop and use these paths for all the images.">
+      <option name="closed" value="true" />
+      <created>1721160506474</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721160506474</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +271,7 @@
     <MESSAGE value="more changes oh boy" />
     <MESSAGE value="Test removing forward slash on background" />
     <MESSAGE value="asdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="asdf" />
+    <MESSAGE value="In next.config.mjs, we've added assetPrefix: '.' to help resolve asset paths correctly.&#10;We've split the component into two files: index.js (or your main page file) and MyComponent.js.&#10;In index.js, we've added getStaticProps to generate the image paths. This function runs at build time and provides the paths to the component as props.&#10;In MyComponent.js, we've modified it to accept imagePaths as a prop and use these paths for all the images." />
+    <option name="LAST_COMMIT_MESSAGE" value="In next.config.mjs, we've added assetPrefix: '.' to help resolve asset paths correctly.&#10;We've split the component into two files: index.js (or your main page file) and MyComponent.js.&#10;In index.js, we've added getStaticProps to generate the image paths. This function runs at build time and provides the paths to the component as props.&#10;In MyComponent.js, we've modified it to accept imagePaths as a prop and use these paths for all the images." />
   </component>
 </project>
