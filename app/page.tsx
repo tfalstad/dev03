@@ -1,10 +1,13 @@
-import React from 'react';
 import MyComponent from '../components/MyComponent';
 
 export default function Home() {
-    return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <MyComponent />
-        </main>
-    );
+    return <MyComponent imagePaths={{
+        background: '/images/background.png',
+        message: '/images/message.png',
+        meet: '/images/meet.png',
+        linkedin: '/images/linkedin.png',
+        portfolio: '/images/portfolio.png',
+        mixtaRe: '/images/mixta-re.png',
+        adaptableHuman: '/images/adaptable-human.png',
+    }} />;
 }
