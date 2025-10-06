@@ -60,19 +60,19 @@ const MyComponent: React.FC<{ imagePaths: ImagePaths }> = ({ imagePaths }) => {
                         </div>
 
                         <div className="col-span-1 lg:col-span-2 flex flex-col space-y-4">
-                            <a href="https://mixtareinc.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://mixta.ai" target="_blank" rel="noopener noreferrer">
                                 <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                                     <div className="flex items-center space-x-4">
                                         <div className="w-10 h-10 bg-slate-500 rounded-full flex items-center justify-center text-fuchsia-50 font-medium">M</div>
                                         <div>
-                                            <h2 className="text-lg font-medium text-gray-900">MIXTA RE</h2>
+                                            <h2 className="text-lg font-medium text-gray-900">Mixta.ai</h2>
                                             <p className="text-gray-600">Adaptive Learning</p>
                                         </div>
                                     </div>
                                     <img className="mt-4 rounded-lg" src={imagePaths.mixtaRe} alt="MIXTA RE" style={{ width: 358, height: 149 }} />
-                                    <p className="mt-4 text-gray-600">Status: In Development</p>
-                                    <p className="text-gray-600">Launching Q3, 2024</p>
-                                    <p className="mt-2 text-gray-600">Partnering with Dr. Jeanine A. DeFalco, PhD to pioneer the future of education and training excellence by merging evidence-driven adaptive designs with AI/ML.</p>
+                                    <p className="mt-4 text-gray-600">Status: LIVE</p>
+                                    <p className="mt-2 text-gray-600">We&apos;ve built a real-time course creation and simulation platform for training soft skills.</p>
+<p className="mt-2 text-gray-600">We are beginning limited pilots. Reach out if you would like to participate!</p>
                                 </div>
                             </a>
                             <div className="w-full max-w-md p-4 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
@@ -85,7 +85,7 @@ const MyComponent: React.FC<{ imagePaths: ImagePaths }> = ({ imagePaths }) => {
                                 </div>
                                 <img className="mt-4 rounded-lg" src={imagePaths.adaptableHuman} alt="ADAPTABLE HUMAN" style={{ width: 358, height: 149 }} />
                                 <p className="mt-4 text-gray-600">Status: In Development</p>
-                                <p className="text-gray-600">Launching Q4, 2024</p>
+                                <p className="text-gray-600">Launching Q2, 2026</p>
                                 <p className="mt-2 text-gray-600">Workers should manage their own careers! This personal assistant brings real-time labor market analytics and a virtual career counselor directly to workers.</p>
                             </div>
                         </div>

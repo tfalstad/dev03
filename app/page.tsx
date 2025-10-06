@@ -6,7 +6,7 @@ export default function Home() {
         message: '/images/message.png',
         meet: '/images/meet.png',
         linkedin: '/images/linkedin.png',
-        portfolio: '/images/portfolio.png',
+        portfolio: '/images/profile-shot.png',
         mixtaRe: '/images/mixta-re.png',
         adaptableHuman: '/images/adaptable-human.png',
     };
