@@ -14,6 +14,8 @@
 - **Bug Fix**: Corrected a linting error by escaping an apostrophe in the new promotional copy.
 - **UI Change**: Added pilot participation information to the "MIXTA RE" promotional copy.
 - **UI Change**: Changed the title of the "MIXTA RE" card to "Mixta.ai".
+- **UI Change**: Added NSF SBIR award information to the Mixta.ai promotional copy.
+- **UI Change**: Replaced `mixta-re.png` with `mixta.png` for the Mixta.ai card image.
 
 ## 2025-02-28
 ### Project Rename

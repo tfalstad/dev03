@@ -7,7 +7,7 @@ export default function Home() {
         meet: '/images/meet.png',
         linkedin: '/images/linkedin.png',
         portfolio: '/images/profile-shot.png',
-        mixtaRe: '/images/mixta-re.png',
+        mixtaRe: '/images/mixta.png',
         adaptableHuman: '/images/adaptable-human.png',
     };
 

@@ -71,6 +71,7 @@ const MyComponent: React.FC<{ imagePaths: ImagePaths }> = ({ imagePaths }) => {
                                     </div>
                                     <img className="mt-4 rounded-lg" src={imagePaths.mixtaRe} alt="MIXTA RE" style={{ width: 358, height: 149 }} />
                                     <p className="mt-4 text-gray-600">Status: LIVE</p>
+                                    <p className="mt-2 text-gray-600">In December of 2024, our team was awarded a Phase 1 National Science Foundation SBIR to perform the primary research that serves as the foundation for our simulation platform.</p>
                                     <p className="mt-2 text-gray-600">We&apos;ve built a real-time course creation and simulation platform for training soft skills.</p>
 <p className="mt-2 text-gray-600">We are beginning limited pilots. Reach out if you would like to participate!</p>
                                 </div>
