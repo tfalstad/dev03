@@ -122,7 +122,7 @@ export const workshop = {
                 { src: "/images/amigus-workbench.jpg", alt: "The AMIGUS Workbench, shown with sample cards" },
                 { src: "/images/amigus-blueprint.jpg", alt: "Blueprint of how AMIGUS is put together: mail, calendar and recordings feed machines that propose actions, and approved work is kept in a vault" },
             ] as { src: string; alt: string }[],
-            body: "A personal operating system in which AI agents triage my email, write up my meetings and keep my week in order.",
+            body: ["A personal operating system in which AI agents triage my email, write up my meetings and keep my week in order."],
             href: "/amigus" as string | null,
         },
         {
@@ -131,7 +131,12 @@ export const workshop = {
             summary: "A strategy game whose rival AI learned through self-play.",
             art: { src: "/images/art/far-meridian.jpg", fit: "cover", bg: "#020d12" },
             shots: [],
-            body: "A real-time strategy game with a rival AI that learned its strategy through self-play.",
+            body: [
+                "Far Meridian is a real-time strategy game that runs in a browser. You land a base on a volcanic moon, mine aurite to pay for an army, and fight up to three rival factions that are also at war with each other.",
+                "A match grows from scouting into full war: tanks and howitzers on the ground, starships and dropships overhead, missile silos and the batteries that shoot missiles down. Mountains erupt and throw flaming rocks across the map. Apocalypse mode opens with a truce, and every faction marches the moment it ends.",
+                "The hardest opponent (the Admiral) learned its strategy in a self-play lab. Candidate versions play each other across many maps, the winners are kept and varied, and the champion is tested on maps it has never seen. I do not weaken what it discovers, so it sometimes beats me with plans I did not expect.",
+                "I built it with Claude as my coding partner, for fun and to sharpen my own machine learning skills.",
+            ],
             href: null,
         },
         {
@@ -140,7 +145,7 @@ export const workshop = {
             summary: "A career assistant that brings labor market data to workers.",
             art: { src: "/images/art/adaptable-human.jpg", fit: "cover", bg: "#2c4a63" },
             shots: [],
-            body: "A career assistant that brings labor market data and a virtual career counselor directly to workers.",
+            body: ["A career assistant that brings labor market data and a virtual career counselor directly to workers."],
             href: null,
         },
     ],

@@ -56,7 +56,7 @@ const builds: Build[] = [
         art: i.art,
         shots: i.shots,
         role: "Personal project",
-        body: [i.body],
+        body: i.body,
         stats: [],
         statsNote: "",
         link: i.href ? { href: i.href, label: `About ${i.title}` } : null,
