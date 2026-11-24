@@ -663,10 +663,16 @@
 
 .fr-shot {
     display: block;
-    width: 100%;
     border: 3px solid var(--ink);
     border-radius: 10px;
-    margin-bottom: 12px;
+    overflow: hidden;
+    margin-top: 12px;
+    cursor: zoom-in;
+}
+
+.fr-shot img {
+    display: block;
+    width: 100%;
 }
 
 .fr-row-link {

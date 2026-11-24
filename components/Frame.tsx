@@ -22,7 +22,7 @@ type Build = {
     group: "work" | "personal";
     summary: string;
     art: { src: string; fit: string; bg: string };
-    shot: null | { src: string; alt: string };
+    shots: { src: string; alt: string }[];
     role: string;
     body: string[];
     stats: { figure: string; label: string }[];
@@ -40,7 +40,7 @@ const builds: Build[] = [
         group: "work" as const,
         summary: w.summary,
         art: w.art,
-        shot: null,
+        shots: [],
         role: w.title === "Creative Technologies" ? `${w.role} at Creative Technologies` : w.role,
         body: w.body,
         stats: w.stats,
@@ -54,7 +54,7 @@ const builds: Build[] = [
         group: "personal" as const,
         summary: i.summary,
         art: i.art,
-        shot: i.shot,
+        shots: i.shots,
         role: "Personal project",
         body: [i.body],
         stats: [],
@@ -122,9 +122,13 @@ export default function Frame() {
                                 </button>
                             </div>
                             <div className="fr-well fr-detail-body">
-                                {open.shot && <img className="fr-shot" src={open.shot.src} alt={open.shot.alt} />}
                                 {open.body.map((p) => (
                                     <p key={p}>{p}</p>
+                                ))}
+                                {open.shots.map((s) => (
+                                    <a key={s.src} className="fr-shot" href={s.src} target="_blank" rel="noopener noreferrer">
+                                        <img src={s.src} alt={s.alt} loading="lazy" />
+                                    </a>
                                 ))}
                                 {open.stats.length > 0 && (
                                     <div className="fr-stats">
