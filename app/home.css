@@ -563,3 +563,88 @@
         transition: none;
     }
 }
+
+/* =====================================================================
+   Looks under review (pick one, then the other gets deleted).
+   Default is "clay". Add ?look=photo or ?look=both to the address to compare.
+   ===================================================================== */
+
+/* ---------- look: clay (clay cards on a quiet ground; the photo is a band at the top) ---------- */
+
+[data-look="clay"] .fd {
+    background: #d6dfe0;
+}
+
+[data-look="clay"] .fd-scene {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 38vh;
+    min-height: 260px;
+    background-position: 30% 58%;
+    border-bottom: 3px solid var(--ink);
+}
+
+[data-look="clay"] .fd-col {
+    padding-top: calc(max(38vh, 260px) - 44px);
+}
+
+@media (min-width: 1180px) {
+    [data-look="clay"] .fd-scene {
+        height: 58vh;
+        min-height: 420px;
+        background-position: 50% 64%;
+    }
+
+    [data-look="clay"] .fd-col {
+        padding-top: calc(max(58vh, 420px) - 250px);
+    }
+}
+
+/* ---------- look: photo (full photo behind; flat, quiet panels) ---------- */
+
+[data-look="photo"] .fd-card,
+[data-look="photo"] .fd-rail {
+    border: 0;
+    border-radius: 12px;
+    background: rgba(250, 249, 245, 0.96);
+    box-shadow: 0 10px 30px rgba(10, 16, 22, 0.28);
+}
+
+[data-look="photo"] .fd-earlier {
+    background: rgba(236, 234, 228, 0.96);
+}
+
+[data-look="photo"] .fd-plate {
+    background: rgba(18, 23, 28, 0.88);
+    border: 0;
+    box-shadow: none;
+}
+
+[data-look="photo"] .fd-key,
+[data-look="photo"] .fd-round {
+    border-width: 1.5px;
+    box-shadow: none;
+    transform: none;
+}
+
+[data-look="photo"] .fd-key:hover,
+[data-look="photo"] .fd-round:hover {
+    background: var(--mist);
+}
+
+[data-look="photo"] .fd-key-signal,
+[data-look="photo"] .fd-key-signal:hover {
+    background: var(--signal);
+}
+
+[data-look="photo"] .fd-chip,
+[data-look="photo"] .fd-stat,
+[data-look="photo"] .fd-way {
+    border-width: 1px;
+    box-shadow: none;
+}
+
+[data-look="photo"] .fd-portrait {
+    border: 0;
+    box-shadow: none;
+}

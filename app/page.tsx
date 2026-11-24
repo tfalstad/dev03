@@ -66,6 +66,8 @@ export default function Home() {
     return (
         <div className="fd">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
+            {/* Review aid: ?look=photo or ?look=both shows the other looks. Remove once one is chosen. */}
+            <script dangerouslySetInnerHTML={{ __html: "document.documentElement.dataset.look=new URLSearchParams(location.search).get('look')||'clay'" }} />
             <div className="fd-scene" aria-hidden="true" />
 
             <nav className="fd-rail" aria-label="Contact">
