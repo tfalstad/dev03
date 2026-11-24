@@ -46,8 +46,9 @@ export const work = {
             art: { src: "/images/art/talespin.jpg", fit: "cover", bg: "#8fa3ad" },
             role: "VP of Product",
             body: [
-                "I joined Talespin with six months of runway left. We rebuilt the company around a no-code platform where people practice hard conversations with AI characters.",
-                "The first year brought $6M in new ARR from clients including Accenture and Pearson. Cornerstone OnDemand acquired the company in 2024, and the platform now supports 140M users.",
+                "At Talespin I created the Product and Learning Experience Design team: game and learning designers, data scientists, narrative designers, 3D artists, subject matter experts and UX researchers.",
+                "We used a learning engineering approach to design every part of the platform: the web-based authoring tool, the content player, the analytics dashboard and the skills and competency model. We also designed more than 100 interactive learning experiences.",
+                "Cornerstone OnDemand acquired the company in 2024, and the platform now supports 140M users.",
             ],
             stats: [
                 { figure: "4x", label: "faster learning" },
