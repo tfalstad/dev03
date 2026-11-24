@@ -10,8 +10,8 @@ export const contact = {
 export const hero = {
     name: "Travis Falstad",
     roles: ["Chief Product Officer at Mixta", "NSF Principal Investigator"],
-    headline: "I believe AI is the greatest opportunity for learning in my lifetime.",
-    lede: "For 25 years I have built products that train intelligence analysts, hospital staff and the workforces of global enterprises. I lead and mentor the teams behind them.",
+    headline: "I build AI that makes people more capable, and I prove it with data.",
+    lede: "I help learning companies become AI-native. Over 25 years I have built products that train intelligence analysts, hospital staff and the workforces of global enterprises, and I lead and mentor the teams behind them.",
 };
 
 export const proof = [
@@ -34,7 +34,7 @@ export const proof = [
 ];
 
 export const story = {
-    portraitAlt: "Travis Falstad speaking on a conference panel",
+    portraitAlt: "Portrait of Travis Falstad",
 };
 
 export const work = {
