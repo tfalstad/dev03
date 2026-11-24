@@ -21,7 +21,7 @@ const mono = IBM_Plex_Mono({
 });
 
 const description =
-    "Travis Falstad helps learning companies become AI-native. Chief Product Officer at Mixta and NSF Principal Investigator.";
+    "Travis Falstad helps learning companies become AI-native. Cofounder and Chief Product Officer at Mixta and NSF Principal Investigator.";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://falstad.dev"),

@@ -79,9 +79,9 @@ export const work = {
             title: "Mixta",
             summary: "Authoring tools that let a domain expert create adaptive, measurable training.",
             art: { src: "/images/art/mixta.png", fit: "contain", bg: "#292f38" },
-            role: "Chief Product Officer and NSF Principal Investigator",
+            role: "Cofounder and Chief Product Officer",
             body: [
-                "I lead product at Mixta and serve as Principal Investigator on an NSF SBIR titled “Education and Training for an AI-Integrated Future.”",
+                "I lead product at Mixta and served as Principal Investigator on an NSF SBIR titled “Education and Training for an AI-Integrated Future.”",
                 "We build authoring tools and a skills ontology so a domain expert (a nurse educator, a plant manager) can create adaptive, measurable training without a production team. Pilots with 10 universities and our first enterprise trials are underway.",
             ],
             stats: [],
@@ -206,7 +206,7 @@ export const frame = {
 
 export const cv = {
     experience: [
-        { title: "Chief Product Officer", org: "Mixta", dates: "2024 – now" },
+        { title: "Cofounder and Chief Product Officer", org: "Mixta", dates: "2024 – now" },
         { title: "Product Advisor", org: "Symptom Media and others", dates: "2024 – now" },
         { title: "VP of Product", org: "Talespin", dates: "2019 – 2024" },
         { title: "Chief Product Officer (fractional)", org: "Uncanny Ridge", dates: "2014 – 2019" },

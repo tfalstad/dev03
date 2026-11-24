@@ -8,7 +8,7 @@ export default function Home() {
         "@type": "Person",
         name: hero.name,
         url: "https://falstad.dev",
-        jobTitle: "Chief Product Officer",
+        jobTitle: "Cofounder and Chief Product Officer",
         worksFor: { "@type": "Organization", name: "Mixta", url: "https://mixta.ai" },
         sameAs: [contact.linkedin],
     };
