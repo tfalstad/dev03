@@ -178,3 +178,26 @@ export const closing = {
     body: "I am glad to compare notes.",
     location: "Kansas | Works remote",
 };
+
+// ---------- The framed layout (/frame) ----------
+// The stage shows the things I have built. The right panel is the CV.
+
+export const frame = {
+    dockLabel: "Things I have built",
+    dockHint: "Pick one to read more.",
+    status: "Open to select advisory work",
+    tabs: { profile: "Profile", cv: "CV", advisory: "Advisory" },
+};
+
+export const cv = {
+    experience: [
+        { title: "Chief Product Officer", org: "Mixta", dates: "2024 – now" },
+        { title: "Product Advisor", org: "Symptom Media and others", dates: "2024 – now" },
+        { title: "VP of Product", org: "Talespin", dates: "2019 – 2024" },
+        { title: "Chief Product Officer (fractional)", org: "Uncanny Ridge", dates: "2014 – 2019" },
+        { title: "Director of Product", org: "Creative Technologies", dates: "2010 – 2014" },
+        { title: "Director of Product Marketing", org: "Electronic Arts", dates: "2008 – 2009" },
+    ],
+    experienceLabel: "Experience",
+    researchLabel: "Research and teaching",
+};

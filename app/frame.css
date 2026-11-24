@@ -1,0 +1,576 @@
+/* The framed layout: a stage on the left and a fixed command panel on the
+   right, after the Far Meridian screen. The stage holds the things I have
+   built. The panel holds the CV and contact keys. */
+
+.fr {
+    --ink: #12171c;
+    --paper: #f7f5ef;
+    --paper-lo: #e9e6dd;
+    --steel: #4f6f7c;
+    --mist: #d3e0e2;
+    --signal: #ee5a3a;
+    --signal-hi: #ff8a6b;
+    --ok: #3fb56b;
+    --clay:
+        inset 0 3px 0 #ffffff,
+        inset 0 -5px 0 rgba(18, 23, 28, 0.09),
+        5px 6px 0 var(--ink);
+
+    color: #2a3238;
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.fr h1,
+.fr h2,
+.fr-name,
+.fr b {
+    font-family: var(--font-display), system-ui, sans-serif;
+    color: var(--ink);
+}
+
+.fr p + p {
+    margin-top: 0.8em;
+}
+
+/* ---------- shared pieces ---------- */
+
+.fr-slab {
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    box-shadow: var(--clay);
+}
+
+.fr-plate {
+    display: inline-block;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--ink);
+    border-radius: 8px;
+    padding: 6px 12px 5px;
+    box-shadow: 3px 4px 0 var(--signal);
+}
+
+.fr-plate-quiet {
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: none;
+    box-shadow: none;
+    background: rgba(18, 23, 28, 0.72);
+}
+
+.fr-key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+    background: #ffffff;
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    padding: 9px 10px 8px;
+    box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.75),
+        inset 0 -3px 0 rgba(18, 23, 28, 0.14),
+        2px 3px 0 var(--ink);
+    transition: transform 70ms ease-out, box-shadow 70ms ease-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fr-key:hover {
+    transform: translate(1px, 1px);
+    box-shadow:
+        inset 0 2px 0 rgba(255, 255, 255, 0.75),
+        inset 0 -3px 0 rgba(18, 23, 28, 0.14),
+        1px 2px 0 var(--ink);
+}
+
+.fr-key:active,
+.fr-key.is-on {
+    transform: translate(2px, 3px);
+    box-shadow: inset 0 3px 0 rgba(18, 23, 28, 0.22);
+}
+
+.fr-key.is-on {
+    background: var(--mist);
+}
+
+.fr-key-signal {
+    background: var(--signal);
+    box-shadow:
+        inset 0 2px 0 var(--signal-hi),
+        inset 0 -3px 0 rgba(18, 23, 28, 0.2),
+        2px 3px 0 var(--ink);
+}
+
+.fr-key-small {
+    font-size: 12.5px;
+    padding: 6px 11px 5px;
+}
+
+.fr :focus-visible {
+    outline: 3px solid var(--signal);
+    outline-offset: 2px;
+}
+
+.fr-note {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--steel);
+}
+
+.fr-role {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--steel);
+    margin-top: 4px;
+}
+
+/* ---------- stage ---------- */
+
+.fr-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 16px 20px;
+}
+
+.fr-scene {
+    position: absolute;
+    inset: 0;
+    background: url("/images/hangar.jpg") 28% 60% / cover no-repeat;
+}
+
+.fr-title {
+    position: relative;
+    margin-top: 150px;
+    padding: 22px 24px 24px;
+}
+
+.fr-title h1 {
+    font-size: clamp(30px, 3.6vw, 46px);
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 1.03;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+}
+
+.fr-title p {
+    margin-top: 14px;
+    font-size: 17px;
+    max-width: 34em;
+}
+
+.fr-dock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fr-dock-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.fr-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.fr-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 12px;
+    padding: 12px 14px 12px;
+    box-shadow:
+        inset 0 3px 0 #ffffff,
+        inset 0 -5px 0 rgba(18, 23, 28, 0.09),
+        4px 5px 0 var(--ink);
+    transition: transform 70ms ease-out, box-shadow 70ms ease-out;
+    cursor: pointer;
+}
+
+.fr-tile:hover {
+    transform: translate(1px, 2px);
+    box-shadow:
+        inset 0 3px 0 #ffffff,
+        inset 0 -5px 0 rgba(18, 23, 28, 0.09),
+        3px 3px 0 var(--ink);
+}
+
+.fr-tile.is-on,
+.fr-tile:active {
+    transform: translate(4px, 5px);
+    background: var(--mist);
+    box-shadow: inset 0 4px 0 rgba(18, 23, 28, 0.2);
+}
+
+.fr-tile-name {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    font-stretch: 108%;
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.fr-tile-tag {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--steel);
+}
+
+.fr-detail {
+    padding: 20px 22px 22px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.fr-detail-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.fr-detail h2 {
+    font-size: 28px;
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 1.05;
+}
+
+.fr-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.fr-stat {
+    display: flex;
+    flex-direction: column;
+    background: var(--mist);
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    padding: 7px 12px 6px;
+}
+
+.fr-stat b {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.fr-stat span {
+    font-size: 13.5px;
+}
+
+.fr-stats .fr-note {
+    flex-basis: 100%;
+    margin-top: 0;
+}
+
+.fr-detail-link {
+    margin-top: 16px;
+}
+
+/* ---------- panel ---------- */
+
+.fr-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0 16px 20px;
+    padding: 18px 18px 14px;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: var(--clay);
+}
+
+.fr-id {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fr-id img {
+    width: 84px;
+    height: 84px;
+    flex: none;
+    object-fit: cover;
+    border: 3px solid var(--ink);
+    border-radius: 12px;
+    box-shadow: 3px 4px 0 var(--ink);
+}
+
+.fr-name {
+    font-size: 22px;
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.fr-id-role {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--steel);
+    margin-top: 0 !important;
+}
+
+.fr-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--ink);
+    border-radius: 9px;
+    padding: 8px 12px 7px;
+}
+
+.fr-lamp {
+    width: 11px;
+    height: 11px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--ok);
+    border: 2px solid #0b0f12;
+    box-shadow: 0 0 0 2px rgba(63, 181, 107, 0.35);
+}
+
+.fr-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.fr-body {
+    font-size: 15px;
+    line-height: 1.55;
+    padding: 2px 2px 4px;
+}
+
+.fr-proof {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.fr-proof-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #ffffff;
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    padding: 9px 11px 10px;
+    box-shadow: inset 0 -3px 0 rgba(18, 23, 28, 0.08);
+}
+
+.fr-proof-tile b {
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 1.05;
+}
+
+.fr-proof-tile span {
+    font-size: 12.5px;
+    line-height: 1.35;
+}
+
+.fr-h {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 4px 0 2px;
+}
+
+.fr-rows + .fr-h {
+    margin-top: 18px;
+}
+
+.fr-rows li {
+    display: flex;
+    flex-direction: column;
+    padding: 9px 0;
+    border-top: 2px dashed rgba(18, 23, 28, 0.22);
+}
+
+.fr-rows li:first-child {
+    border-top: 0;
+}
+
+.fr-rows b {
+    font-size: 15.5px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.fr-row-dates {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--steel);
+}
+
+.fr-lead {
+    font-size: 16px;
+    color: var(--ink);
+}
+
+.fr-way {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: #ffffff;
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 10px 0;
+    box-shadow: inset 0 -3px 0 rgba(18, 23, 28, 0.08);
+}
+
+.fr-way b {
+    font-size: 15.5px;
+    font-weight: 700;
+}
+
+.fr-way span {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.fr-tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding-top: 14px;
+    border-top: 3px solid var(--ink);
+}
+
+.fr-foot {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--steel);
+    margin-top: 0 !important;
+}
+
+/* ---------- the frame proper (wide and tall enough windows) ---------- */
+
+@media (min-width: 1100px) and (min-height: 660px) {
+    .fr {
+        flex-direction: row;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .fr-stage {
+        flex: 1;
+        min-width: 0;
+        justify-content: space-between;
+        padding: 26px 28px 26px;
+    }
+
+    .fr-title {
+        margin-top: 0;
+        align-self: flex-start;
+        max-width: min(540px, 60%);
+    }
+
+    .fr-tiles {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .fr-tile {
+        min-height: 84px;
+        justify-content: space-between;
+    }
+
+    .fr-detail {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 14px);
+        width: min(600px, 100%);
+        max-height: calc(100vh - 220px);
+        z-index: 2;
+    }
+
+    .fr-panel {
+        width: 392px;
+        flex: none;
+        margin: 14px 18px 20px 0;
+        min-height: 0;
+    }
+
+    .fr-body {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        padding-right: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fr-key,
+    .fr-tile {
+        transition: none;
+    }
+}
+
+/* Short windows: the headline alone, so the figure in the hangar stays in view. */
+@media (min-width: 1100px) and (min-height: 660px) and (max-height: 800px) {
+    .fr-title p {
+        display: none;
+    }
+}
