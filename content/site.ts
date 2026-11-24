@@ -145,34 +145,51 @@ export const research = {
         {
             what: "Principal Investigator",
             where: "NSF Phase I SBIR (awarded December 2024)",
+            href: null as null | string,
         },
         {
             what: "Production lead",
             where: "IARPA Sirius program at Creative Technologies",
+            href: null,
         },
         {
-            what: "Study lead",
-            where: "Largest soft-skills simulation study to date (Talespin)",
+            what: "Contributing designer",
+            where: "Largest soft-skills simulation study to date (PwC with Talespin)",
+            href: "https://www.pwc.com/us/en/tech-effect/emerging-tech/virtual-reality-study.html",
         },
         {
             what: "Chapter contributor",
             where: "Generalized Intelligent Framework for Tutoring (GIFT)",
+            href: null,
         },
         {
             what: "Presenter",
             where: "IEEE ICICLE Learning Engineering working group",
+            href: null,
         },
         {
             what: "Adjunct faculty",
             where: "Cal Poly Pomona and New York Film Academy",
+            href: null,
         },
         {
             what: "Education",
             where: "MBA from Loyola Marymount and BS in Journalism from the University of Kansas",
+            href: null,
         },
     ],
 };
 
+
+// Talks on AI for industry audiences.
+export const speaking = {
+    label: "Speaking",
+    rows: [
+        { when: "2026", where: "Maryland Workers' Compensation Educational Association conference" },
+        { when: "2025", where: "Oklahoma public transit conference" },
+        { when: "2025", where: "Composite Can and Tube Institute annual meeting" },
+    ],
+};
 
 // ---------- Labels for the frame ----------
 // The stage shows the things I have built. The right panel is the CV.

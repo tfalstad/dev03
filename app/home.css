@@ -651,6 +651,13 @@
     padding-right: 3px;
 }
 
+.fr-row-link {
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /* ---------- the frame proper (wide and tall enough windows) ---------- */
 
 @media (min-width: 1100px) and (min-height: 660px) {

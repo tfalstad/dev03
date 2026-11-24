@@ -8,6 +8,7 @@ import {
     hero,
     proof,
     research,
+    speaking,
     story,
     together,
     work,
@@ -217,6 +218,19 @@ export default function Frame() {
                                 {research.rows.map((r) => (
                                     <li key={r.where}>
                                         <span className="fr-row-dates">{r.what}</span>
+                                        {r.href ? (
+                                            <a className="fr-row-link" href={r.href} target="_blank" rel="noopener noreferrer">{r.where}</a>
+                                        ) : (
+                                            <span>{r.where}</span>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                            <h3 className="fr-h">{speaking.label}</h3>
+                            <ul className="fr-rows">
+                                {speaking.rows.map((r) => (
+                                    <li key={r.where}>
+                                        <span className="fr-row-dates">{r.when}</span>
                                         <span>{r.where}</span>
                                     </li>
                                 ))}
