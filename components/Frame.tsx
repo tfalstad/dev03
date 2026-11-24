@@ -93,7 +93,11 @@ export default function Frame() {
     // A link such as /#talespin or /#cv opens that project or tab.
     useEffect(() => {
         const hash = window.location.hash.slice(1).toLowerCase();
-        if (!hash) return;
+        // On the wide layout the stage opens with the current work already showing.
+        if (!hash) {
+            if (window.matchMedia("(min-width: 1100px) and (min-height: 660px)").matches) setOpenId(builds[0].id);
+            return;
+        }
         if (hash in frame.tabs) setTab(hash as Tab);
         const hit = builds.find((b) => b.title.toLowerCase().replace(/\s+/g, "-") === hash);
         if (hit) setOpenId(hit.id);

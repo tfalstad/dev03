@@ -720,9 +720,9 @@
 
     .fr-detail {
         position: absolute;
-        left: 0;
+        right: 0;
         bottom: calc(100% + 16px);
-        width: min(600px, 100%);
+        width: 56%;
         max-height: calc(100vh - 400px);
         z-index: 2;
     }
@@ -742,10 +742,10 @@
     }
 }
 
-/* An open project needs the room: the headline slab drops its second line. */
+/* The stage always has work on it: the headline keeps the left, the open project takes the right. */
 @media (min-width: 1100px) and (min-height: 660px) {
     .has-open .fr-title {
-        visibility: hidden;
+        max-width: calc(44% - 22px);
     }
 }
 
