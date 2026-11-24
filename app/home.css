@@ -232,7 +232,7 @@
 }
 
 .fr-title h1 {
-    font-size: clamp(30px, 3.6vw, 46px);
+    font-size: clamp(28px, 3vw, 40px);
     font-weight: 800;
     font-stretch: 112%;
     line-height: 1.03;
@@ -632,7 +632,7 @@
 
 .fr-tools {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding-right: 3px;
 }
@@ -656,7 +656,7 @@
     .fr-title {
         margin-top: 0;
         align-self: flex-start;
-        max-width: min(540px, 60%);
+        max-width: min(640px, 70%);
     }
 
     .fr-groups {

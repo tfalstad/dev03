@@ -10,8 +10,8 @@ export const contact = {
 export const hero = {
     name: "Travis Falstad",
     roles: ["Chief Product Officer at Mixta", "NSF Principal Investigator"],
-    headline: "I help learning companies become AI-native.",
-    lede: "I build AI that makes people more capable, and I prove it with data. My products have trained intelligence analysts, hospital staff and the workforces of global enterprises.",
+    headline: "I believe AI is the greatest opportunity for learning in my lifetime.",
+    lede: "I have been building products for 25 years. They have trained intelligence analysts, hospital staff and the workforces of global enterprises. I lead and mentor the teams that build them.",
 };
 
 export const proof = [
@@ -124,7 +124,7 @@ export const workshop = {
             title: "Far Meridian",
             status: "In development",
             summary: "A strategy game whose rival AI learned through self-play.",
-            art: { src: "/images/art/far-meridian.jpg", fit: "contain", bg: "#020d12" },
+            art: { src: "/images/art/far-meridian.jpg", fit: "cover", bg: "#020d12" },
             body: "A real-time strategy game with a rival AI that learned its strategy through self-play.",
             href: null,
         },

@@ -66,13 +66,6 @@ const MailIcon = () => (
     </svg>
 );
 
-const CalendarIcon = () => (
-    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="5" width="18" height="16" rx="2" />
-        <path d="M3 10h18M8 3v4M16 3v4" />
-    </svg>
-);
-
 const LinkedInIcon = () => (
     <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
         <rect x="4" y="9.5" width="3.4" height="10.5" />
@@ -249,10 +242,6 @@ export default function Frame() {
                     <a className="fr-key fr-key-signal" href={`mailto:${contact.email}`}>
                         <MailIcon />
                         Email
-                    </a>
-                    <a className="fr-key" href={contact.calendar} target="_blank" rel="noopener noreferrer">
-                        <CalendarIcon />
-                        Call
                     </a>
                     <a className="fr-key" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon />
