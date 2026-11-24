@@ -11,7 +11,7 @@ export const hero = {
     name: "Travis Falstad",
     roles: ["Chief Product Officer at Mixta", "NSF Principal Investigator"],
     headline: "I believe AI is the greatest opportunity for learning in my lifetime.",
-    lede: "I have been building products for 25 years. They have trained intelligence analysts, hospital staff and the workforces of global enterprises. I lead and mentor the teams that build them.",
+    lede: "For 25 years I have built products that train intelligence analysts, hospital staff and the workforces of global enterprises. I lead and mentor the teams behind them.",
 };
 
 export const proof = [
@@ -47,7 +47,7 @@ export const work = {
             role: "VP of Product",
             body: [
                 "I joined Talespin with six months of runway left. We rebuilt the company around a no-code platform where people practice hard conversations with AI characters.",
-                "The first year brought $6M in new ARR, with clients including Accenture and Pearson. Cornerstone OnDemand acquired the company in 2024, and the platform now supports 140M users.",
+                "The first year brought $6M in new ARR from clients including Accenture and Pearson. Cornerstone OnDemand acquired the company in 2024, and the platform now supports 140M users.",
             ],
             stats: [
                 { figure: "4x", label: "faster learning" },
@@ -107,7 +107,7 @@ export const together = {
         },
     ],
     current: "Current advisory work includes Symptom Media (clinical simulation for mental-health training) and an enterprise training platform.",
-    note: "Learning is wider than courses. Onboarding, customer adoption and enablement are the same job: teaching people to use something well.",
+    note: "Onboarding, customer adoption and enablement all come down to teaching people to use something well.",
 };
 
 export const workshop = {
@@ -117,7 +117,7 @@ export const workshop = {
             status: "In daily use",
             summary: "A personal operating system run by AI agents.",
             art: { src: "/images/art/amigus.svg", fit: "cover", bg: "#b9cbcf" },
-            body: "A personal operating system run by AI agents. It triages my email, writes up my meetings and keeps my week in order.",
+            body: "A personal operating system in which AI agents triage my email, write up my meetings and keep my week in order.",
             href: "/amigus" as string | null,
         },
         {
