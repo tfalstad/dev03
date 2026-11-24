@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-23
+### Redesign (branch `redesign-2026`)
+- Replaced the three-card link page with a full personal site: positioning line, proof points, selected work, advisory, workshop, research and contact.
+- New look: the hangar photo stays, with white clay cards and keys (ink outlines, hard shadows, keys that press).
+- All page copy lives in `content/site.ts`.
+- Page title and share preview now carry the name and positioning line (was "Create Next App").
+- Background image compressed from 3.9 MB to under 0.5 MB.
+- `/amigus` and `/privacy` unchanged.
+
 ## 2025-10-06
 ### UI Updates & Bug Fixes
 - **Error Encountered**: A "Cascade error" message was displayed in the UI during a file-reading operation.
