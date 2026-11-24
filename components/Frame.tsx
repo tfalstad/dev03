@@ -18,6 +18,9 @@ type Build = {
     id: string;
     title: string;
     tag: string;
+    group: "work" | "personal";
+    summary: string;
+    art: { src: string; fit: string; bg: string };
     role: string;
     body: string[];
     stats: { figure: string; label: string }[];
@@ -25,13 +28,16 @@ type Build = {
     link: null | { href: string; label: string };
 };
 
-// Mixta first (it is current), then the other shipped products, then the bench.
+// Mixta first (it is current), then the other shipped products, then personal projects.
 const shipped = [work.items[2], work.items[0], work.items[1]];
 const builds: Build[] = [
     ...shipped.map((w) => ({
         id: w.title,
         title: w.title === "Creative Technologies" ? "Sirius" : w.title,
         tag: w.title === "Creative Technologies" ? "Federal" : w.tag,
+        group: "work" as const,
+        summary: w.summary,
+        art: w.art,
         role: w.title === "Creative Technologies" ? `${w.role} at Creative Technologies` : w.role,
         body: w.body,
         stats: w.stats,
@@ -42,7 +48,10 @@ const builds: Build[] = [
         id: i.title,
         title: i.title,
         tag: i.status,
-        role: "From my own bench",
+        group: "personal" as const,
+        summary: i.summary,
+        art: i.art,
+        role: "Personal project",
         body: [i.body],
         stats: [],
         statsNote: "",
@@ -72,10 +81,15 @@ const LinkedInIcon = () => (
     </svg>
 );
 
-type Tab = "profile" | "cv" | "advisory";
+const groups = [
+    { id: "work" as const, label: frame.workLabel },
+    { id: "personal" as const, label: frame.personalLabel },
+];
+
+type Tab = "cv" | "advisory";
 
 export default function Frame() {
-    const [tab, setTab] = useState<Tab>("profile");
+    const [tab, setTab] = useState<Tab>("cv");
     const [openId, setOpenId] = useState<string | null>(null);
     const open = builds.find((b) => b.id === openId) || null;
 
@@ -133,21 +147,28 @@ export default function Frame() {
                             )}
                         </article>
                     )}
-                    <div className="fr-dock-label">
-                        <span className="fr-plate">{frame.dockLabel}</span>
-                        <span className="fr-plate fr-plate-quiet">{frame.dockHint}</span>
-                    </div>
-                    <div className="fr-tiles">
-                        {builds.map((b) => (
-                            <button
-                                key={b.id}
-                                className={`fr-tile${openId === b.id ? " is-on" : ""}`}
-                                aria-pressed={openId === b.id}
-                                onClick={() => setOpenId(openId === b.id ? null : b.id)}
-                            >
-                                <span className="fr-tile-name">{b.title}</span>
-                                <span className="fr-tile-tag">{b.tag}</span>
-                            </button>
+                    <div className="fr-groups">
+                        {groups.map((g) => (
+                            <div key={g.id} className="fr-group">
+                                <span className="fr-plate">{g.label}</span>
+                                <div className="fr-tiles">
+                                    {builds.filter((b) => b.group === g.id).map((b) => (
+                                        <button
+                                            key={b.id}
+                                            className={`fr-tile${openId === b.id ? " is-on" : ""}`}
+                                            aria-pressed={openId === b.id}
+                                            onClick={() => setOpenId(openId === b.id ? null : b.id)}
+                                        >
+                                            <span className="fr-tile-art" style={{ background: b.art.bg }}>
+                                                <img src={b.art.src} alt="" style={{ objectFit: b.art.fit as "cover" | "contain" }} />
+                                            </span>
+                                            <span className="fr-tile-name">{b.title}</span>
+                                            <span className="fr-tile-sum">{b.summary}</span>
+                                            <span className="fr-tile-tag">{b.tag}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                         ))}
                     </div>
                 </section>
@@ -178,7 +199,7 @@ export default function Frame() {
                 </div>
 
                 <div className="fr-body fr-well" role="tabpanel">
-                    {tab === "profile" && (
+                    {tab === "cv" && (
                         <>
                             <div className="fr-proof">
                                 {proof.map((p) => (
@@ -188,14 +209,6 @@ export default function Frame() {
                                     </div>
                                 ))}
                             </div>
-                            {story.paragraphs.map((p) => (
-                                <p key={p}>{p}</p>
-                            ))}
-                            <p className="fr-note">{story.aside}</p>
-                        </>
-                    )}
-                    {tab === "cv" && (
-                        <>
                             <h3 className="fr-h">{cv.experienceLabel}</h3>
                             <ul className="fr-rows">
                                 {cv.experience.map((e) => (

@@ -34,12 +34,6 @@ export const proof = [
 ];
 
 export const story = {
-    paragraphs: [
-        "I got my start in the music industry the year file-sharing blew up. Within a decade, half the jobs in that business were gone. Watching an industry get caught flat-footed by technology taught me the thing I have built my career on: being unprepared is the real threat.",
-        "Since then I have built learning products for places where being unprepared costs the most: intelligence agencies, hospitals and global enterprises.",
-        "Most training still forces a bad choice between effective-but-expensive and cheap-but-useless. AI finally breaks that tradeoff when you build it to make people more capable.",
-    ],
-    aside: "Outside work: one toddler, one yoga certification, and a standing belief that Kansas is underrated.",
     portraitAlt: "Painted portrait of Travis Falstad in front of fireworks",
 };
 
@@ -48,6 +42,8 @@ export const work = {
         {
             tag: "2019 – 2024",
             title: "Talespin",
+            summary: "A no-code platform for practicing hard conversations with AI characters.",
+            art: { src: "/images/art/talespin.jpg", fit: "cover", bg: "#8fa3ad" },
             role: "VP of Product",
             body: [
                 "I joined Talespin with six months of runway left. We rebuilt the company around a no-code platform where people practice hard conversations with AI characters.",
@@ -63,6 +59,8 @@ export const work = {
         {
             tag: "IARPA Sirius",
             title: "Creative Technologies",
+            summary: "Training that teaches intelligence analysts to catch their own cognitive biases.",
+            art: { src: "/images/art/sirius.png", fit: "contain", bg: "#ffffff" },
             role: "Production lead",
             body: [
                 "I led a 60-person team that built a new way to train intelligence analysts to catch their own cognitive biases.",
@@ -78,6 +76,8 @@ export const work = {
         {
             tag: "Now",
             title: "Mixta",
+            summary: "Authoring tools that let a domain expert create adaptive, measurable training.",
+            art: { src: "/images/art/mixta.png", fit: "contain", bg: "#292f38" },
             role: "Chief Product Officer and NSF Principal Investigator",
             body: [
                 "I lead product at Mixta and serve as Principal Investigator on an NSF SBIR titled “Education and Training for an AI-Integrated Future.”",
@@ -115,18 +115,24 @@ export const workshop = {
         {
             title: "AMIGUS",
             status: "In daily use",
+            summary: "A personal operating system run by AI agents.",
+            art: { src: "/images/art/amigus.svg", fit: "cover", bg: "#b9cbcf" },
             body: "A personal operating system run by AI agents. It triages my email, writes up my meetings and keeps my week in order.",
             href: "/amigus" as string | null,
         },
         {
             title: "Far Meridian",
             status: "In development",
+            summary: "A strategy game whose rival AI learned through self-play.",
+            art: { src: "/images/art/far-meridian.jpg", fit: "contain", bg: "#020d12" },
             body: "A real-time strategy game with a rival AI that learned its strategy through self-play.",
             href: null,
         },
         {
             title: "Adaptable Human",
             status: "Concept",
+            summary: "A career assistant that brings labor market data to workers.",
+            art: { src: "/images/art/adaptable-human.jpg", fit: "cover", bg: "#2c4a63" },
             body: "A career assistant that brings labor market data and a virtual career counselor directly to workers.",
             href: null,
         },
@@ -172,9 +178,10 @@ export const research = {
 
 export const frame = {
     dockLabel: "Things I have built",
-    dockHint: "Pick one to read more.",
+    workLabel: "Work",
+    personalLabel: "Personal projects",
     status: "Open to select advisory work",
-    tabs: { profile: "Profile", cv: "CV", advisory: "Advisory" },
+    tabs: { cv: "CV", advisory: "Advisory" },
 };
 
 export const cv = {
