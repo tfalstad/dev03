@@ -10,8 +10,8 @@ export const contact = {
 export const hero = {
     name: "Travis Falstad",
     roles: ["Chief Product Officer at Mixta", "NSF Principal Investigator"],
-    headline: "I build AI that makes people measurably more capable.",
-    lede: "I help learning companies become AI-native. Over 25 years I have built products that train intelligence analysts, hospital staff and the workforces of global enterprises. I lead and mentor the teams behind them.",
+    headline: "I build AI systems that make people measurably more capable.",
+    lede: "I help learning companies become AI-native. Over 25 years I have built products that train intelligence analysts, hospital staff and the workforces of global enterprises. I enjoy developing and mentoring teams.",
 };
 
 export const proof = [
