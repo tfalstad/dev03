@@ -1,650 +1,644 @@
-/* Home page look: the hangar photo with white clay cards and keys.
-   Clay here means a heavy ink outline, a lit top edge, a shaded bottom
-   and a hard offset shadow. Keys travel down into their shadow when pressed. */
+/* The frame: a stage on the left and a fixed command panel on the right,
+   after the Far Meridian screen. The stage holds the things I have built.
+   The panel holds the CV and contact keys.
 
-.fd {
+   Everything is clay. Slabs are moulded blocks with a lit top and a thick
+   lower lip. Keys and tiles stand up from them and travel down when pressed.
+   Reading surfaces are paper wells pressed into the slab. */
+
+.fr {
     --ink: #12171c;
-    --paper: #f7f5ef;
-    --paper-lo: #e6e3da;
-    --steel: #4f6f7c;
-    --mist: #d3e0e2;
-    --signal: #ee5a3a;
-    --signal-hi: #ff8a6b;
-    --body-ink: #2a3238;
+    --clay: #cdd8da;
+    --clay-hi: #eaf1f2;
+    --clay-lo: #a3b3b8;
+    --paper: #f9f7f1;
+    --steel: #446370;
+    --mist: #b9cbcf;
+    --signal: #d9432a;
+    --signal-hi: #f27a60;
+    --signal-lo: #a12c19;
+    --ok: #46c274;
 
-    position: relative;
-    min-height: 100vh;
-    color: var(--body-ink);
-    font-family: var(--font-body), system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    background: #aebfc4;
-}
-
-.fd-scene {
-    position: fixed;
-    inset: 0;
-    background: url("/images/hangar.jpg") 22% 62% / cover no-repeat;
-}
-
-/* ---------- column ---------- */
-
-.fd-col {
-    position: relative;
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 28px 16px 56px;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-.fd-section {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 14px;
-}
-
-/* ---------- clay card ---------- */
-
-.fd-card {
-    background: var(--paper);
-    border: 3px solid var(--ink);
-    border-radius: 14px;
-    padding: 26px 28px;
-    box-shadow:
+    --slab:
+        inset 0 5px 0 var(--clay-hi),
+        inset 0 -10px 0 var(--clay-lo),
+        7px 9px 0 var(--ink);
+    --key:
         inset 0 3px 0 #ffffff,
-        inset 0 -5px 0 rgba(18, 23, 28, 0.09),
-        5px 6px 0 var(--ink);
+        inset 0 -6px 0 rgba(18, 23, 28, 0.17),
+        3px 5px 0 var(--ink);
+    --key-near:
+        inset 0 3px 0 #ffffff,
+        inset 0 -6px 0 rgba(18, 23, 28, 0.17),
+        2px 3px 0 var(--ink);
+    --well: inset 0 5px 0 rgba(18, 23, 28, 0.14);
+
+    color: #2a3238;
+    font-family: var(--font-body), system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.fd-card p + p {
-    margin-top: 0.85em;
-}
-
-.fd h1,
-.fd h2,
-.fd h3,
-.fd-name,
-.fd-figure,
-.fd-stat-figure {
+.fr h1,
+.fr h2,
+.fr-name,
+.fr b {
     font-family: var(--font-display), system-ui, sans-serif;
     color: var(--ink);
 }
 
-/* ---------- plates (section labels that sit on the photo) ---------- */
+.fr p + p {
+    margin-top: 0.8em;
+}
 
-.fd-plate {
-    align-self: flex-start;
-    font-family: var(--font-mono), ui-monospace, monospace !important;
-    font-size: 13px;
+/* ---------- shared pieces ---------- */
+
+.fr-slab {
+    background: var(--clay);
+    border: 3px solid var(--ink);
+    border-radius: 24px;
+    box-shadow: var(--slab);
+}
+
+.fr-well {
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    box-shadow: var(--well);
+}
+
+.fr-plate {
+    display: inline-block;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12.5px;
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--paper) !important;
+    color: var(--paper);
     background: var(--ink);
-    border: 2px solid var(--ink);
-    border-radius: 8px;
-    padding: 7px 14px 6px;
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.16), 3px 4px 0 var(--signal);
+    border: 3px solid var(--ink);
+    border-radius: 12px;
+    padding: 6px 12px 9px;
+    box-shadow:
+        inset 0 3px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -5px 0 #000000,
+        3px 5px 0 var(--signal);
 }
 
-/* ---------- chips ---------- */
-
-.fd-chip {
-    display: inline-block;
-    font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 12px;
+.fr-plate-quiet {
     font-weight: 500;
     letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink);
-    background: var(--mist);
-    border: 2px solid var(--ink);
-    border-radius: 7px;
-    padding: 3px 9px 2px;
-    white-space: nowrap;
+    text-transform: none;
+    box-shadow:
+        inset 0 3px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -5px 0 #000000;
 }
 
-.fd-chip-ink {
-    background: var(--ink);
-    color: var(--paper);
-}
-
-/* ---------- keys ---------- */
-
-.fd-keys {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 22px;
-}
-
-.fd-key,
-.fd-round {
+.fr-key {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
+    gap: 7px;
     font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
     color: var(--ink);
-    background: #ffffff;
-    border: 2px solid var(--ink);
-    border-radius: 10px;
-    padding: 10px 16px 9px;
-    box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.75),
-        inset 0 -3px 0 rgba(18, 23, 28, 0.14),
-        3px 4px 0 var(--ink);
-    transition: transform 70ms ease-out, box-shadow 70ms ease-out;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 9px 10px 13px;
+    box-shadow: var(--key);
+    transition: transform 70ms ease-out, box-shadow 70ms ease-out, padding 70ms ease-out;
+    cursor: pointer;
     text-decoration: none;
 }
 
-.fd-key:hover,
-.fd-round:hover {
+.fr-key:hover {
     transform: translate(1px, 2px);
+    box-shadow: var(--key-near);
+}
+
+.fr-key:active,
+.fr-key.is-on {
+    transform: translate(3px, 5px);
+    box-shadow: inset 0 5px 0 rgba(18, 23, 28, 0.24);
+    padding: 12px 10px 10px;
+}
+
+.fr-key.is-on {
+    background: var(--mist);
+}
+
+.fr-key-signal {
+    color: #ffffff;
+    background: var(--signal);
     box-shadow:
-        inset 0 2px 0 rgba(255, 255, 255, 0.75),
-        inset 0 -3px 0 rgba(18, 23, 28, 0.14),
-        2px 2px 0 var(--ink);
+        inset 0 3px 0 var(--signal-hi),
+        inset 0 -6px 0 var(--signal-lo),
+        3px 5px 0 var(--ink);
 }
 
-.fd-key:active,
-.fd-round:active {
-    transform: translate(3px, 4px);
-    box-shadow: inset 0 3px 0 rgba(18, 23, 28, 0.2);
+.fr-key-signal:hover {
+    box-shadow:
+        inset 0 3px 0 var(--signal-hi),
+        inset 0 -6px 0 var(--signal-lo),
+        2px 3px 0 var(--ink);
 }
 
-.fd-key:focus-visible,
-.fd-round:focus-visible,
-.fd a:focus-visible {
+.fr-key-signal:active {
+    box-shadow: inset 0 5px 0 var(--signal-lo);
+}
+
+.fr-key-small {
+    font-size: 12.5px;
+    border-radius: 12px;
+    padding: 6px 12px 10px;
+}
+
+.fr-key-small:active {
+    padding: 9px 12px 7px;
+}
+
+.fr :focus-visible {
     outline: 3px solid var(--signal);
     outline-offset: 3px;
 }
 
-.fd-key-signal {
-    background: var(--signal);
-    box-shadow:
-        inset 0 2px 0 var(--signal-hi),
-        inset 0 -3px 0 rgba(18, 23, 28, 0.2),
-        3px 4px 0 var(--ink);
-}
-
-.fd-key-signal:hover {
-    box-shadow:
-        inset 0 2px 0 var(--signal-hi),
-        inset 0 -3px 0 rgba(18, 23, 28, 0.2),
-        2px 2px 0 var(--ink);
-}
-
-.fd-key-small {
-    margin-top: 18px;
+.fr-note {
+    font-family: var(--font-mono), ui-monospace, monospace;
     font-size: 13px;
-    padding: 8px 13px 7px;
+    line-height: 1.5;
+    color: var(--steel);
 }
 
-/* ---------- rail (wide screens only) ---------- */
-
-.fd-rail {
-    display: none;
+.fr-role {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--steel);
+    margin-top: 4px;
 }
 
-.fd-round {
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    border-radius: 50%;
-}
+/* ---------- stage ---------- */
 
-/* ---------- hero ---------- */
-
-.fd-hero {
-    padding: 30px 28px 30px;
-}
-
-.fd-name {
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-
-.fd-roles {
+.fr-stage {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px 18px 24px 16px;
 }
 
-.fd-hero h1 {
-    margin-top: 22px;
-    font-size: clamp(36px, 7.2vw, 60px);
+.fr-scene {
+    position: absolute;
+    inset: 0;
+    background: url("/images/hangar.jpg") 28% 60% / cover no-repeat;
+}
+
+.fr-title {
+    position: relative;
+    margin-top: 150px;
+    padding: 24px 26px 34px;
+}
+
+.fr-title h1 {
+    font-size: clamp(30px, 3.6vw, 46px);
     font-weight: 800;
     font-stretch: 112%;
-    line-height: 1.02;
+    line-height: 1.03;
     letter-spacing: -0.02em;
     text-wrap: balance;
 }
 
-.fd-lede {
-    margin-top: 18px;
-    font-size: 19px;
-    line-height: 1.55;
+.fr-title p {
+    margin-top: 14px;
+    font-size: 17px;
+    color: var(--ink);
     max-width: 34em;
 }
 
-/* ---------- proof tiles ---------- */
-
-.fd-proof {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.fd-tile {
-    padding: 18px 20px 20px;
-}
-
-.fd-figure {
-    font-size: clamp(34px, 6vw, 46px);
-    font-weight: 800;
-    font-stretch: 112%;
-    line-height: 1;
-    letter-spacing: -0.02em;
-}
-
-.fd-tile-label {
-    margin-top: 10px;
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-/* ---------- story ---------- */
-
-.fd-story {
+.fr-dock {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
-.fd-portrait {
-    width: 132px;
-    height: 132px;
-    flex: none;
-    object-fit: cover;
+.fr-dock-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.fr-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.fr-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+    background: var(--paper);
     border: 3px solid var(--ink);
-    border-radius: 14px;
-    box-shadow: 4px 5px 0 var(--ink);
+    border-radius: 18px;
+    padding: 14px 16px 20px;
+    box-shadow:
+        inset 0 4px 0 #ffffff,
+        inset 0 -9px 0 rgba(18, 23, 28, 0.15),
+        5px 7px 0 var(--ink);
+    transition: transform 70ms ease-out, box-shadow 70ms ease-out;
+    cursor: pointer;
 }
 
-.fd-aside {
+.fr-tile:hover {
+    transform: translate(2px, 3px);
+    box-shadow:
+        inset 0 4px 0 #ffffff,
+        inset 0 -9px 0 rgba(18, 23, 28, 0.15),
+        3px 4px 0 var(--ink);
+}
+
+.fr-tile.is-on,
+.fr-tile:active {
+    transform: translate(5px, 7px);
+    background: var(--mist);
+    box-shadow: inset 0 6px 0 rgba(18, 23, 28, 0.24);
+}
+
+.fr-tile-name {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    font-stretch: 108%;
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.fr-tile-tag {
     font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     color: var(--steel);
-    margin-top: 1.1em !important;
 }
 
-/* ---------- work ---------- */
+.fr-detail {
+    padding: 18px 18px 26px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
 
-.fd-work-head {
+.fr-detail-head {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
+    padding: 2px 6px 0;
     margin-bottom: 14px;
 }
 
-.fd-work h3 {
-    font-size: 30px;
+.fr-detail h2 {
+    font-size: 28px;
     font-weight: 800;
     font-stretch: 112%;
     line-height: 1.05;
-    letter-spacing: -0.01em;
 }
 
-.fd-role {
-    font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    color: var(--steel);
-    margin-top: 5px;
+.fr-detail-body {
+    padding: 18px 18px 16px;
 }
 
-.fd-stats {
+.fr-stats {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.fd-stat {
-    display: flex;
-    flex-direction: column;
-    background: var(--mist);
-    border: 2px solid var(--ink);
-    border-radius: 10px;
-    padding: 9px 14px 8px;
-    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.6), inset 0 -3px 0 rgba(18, 23, 28, 0.1);
-}
-
-.fd-stat-figure {
-    font-size: 26px;
-    font-weight: 800;
-    line-height: 1.05;
-}
-
-.fd-stat-label {
-    font-size: 14px;
-}
-
-.fd-stats-note {
-    flex-basis: 100%;
-    margin-top: 0 !important;
-    font-size: 14px;
-    color: var(--steel);
-}
-
-.fd-earlier {
-    padding: 18px 22px;
-    font-size: 16px;
-    background: var(--paper-lo);
-}
-
-/* ---------- working together ---------- */
-
-.fd-intro {
-    font-size: 19px;
-    line-height: 1.5;
-    color: var(--ink);
-}
-
-.fd-ways {
-    display: grid;
-    gap: 12px;
-    margin: 20px 0;
-}
-
-.fd-way {
-    background: #ffffff;
-    border: 2px solid var(--ink);
-    border-radius: 10px;
-    padding: 14px 16px;
-    box-shadow: inset 0 -3px 0 rgba(18, 23, 28, 0.08);
-}
-
-.fd-way h3,
-.fd-bench h3 {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.fd-way p {
-    margin-top: 6px;
-    font-size: 15.5px;
-    line-height: 1.5;
-}
-
-/* ---------- workshop ---------- */
-
-.fd-bench {
+    gap: 10px;
     margin-top: 16px;
 }
 
-.fd-bench li {
-    padding: 16px 0;
-    border-top: 2px dashed rgba(18, 23, 28, 0.25);
-}
-
-.fd-bench li:last-child {
-    padding-bottom: 0;
-}
-
-.fd-bench-head {
+.fr-stat {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    flex-direction: column;
+    background: var(--clay);
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 7px 13px 11px;
+    box-shadow:
+        inset 0 3px 0 var(--clay-hi),
+        inset 0 -6px 0 var(--clay-lo);
 }
 
-.fd-bench h3 a {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: var(--signal);
-    text-decoration-thickness: 3px;
-    text-underline-offset: 4px;
+.fr-stat b {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
-.fd-bench p {
-    margin-top: 6px;
-    font-size: 16px;
-}
-
-/* ---------- research rows ---------- */
-
-.fd-rows > div {
-    display: grid;
-    gap: 2px;
-    padding: 12px 0;
-    border-top: 2px dashed rgba(18, 23, 28, 0.25);
-}
-
-.fd-rows > div:first-child {
-    border-top: 0;
-    padding-top: 0;
-}
-
-.fd-rows > div:last-child {
-    padding-bottom: 0;
-}
-
-.fd-rows dt {
-    font-family: var(--font-mono), ui-monospace, monospace;
-    font-size: 12.5px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--steel);
-}
-
-.fd-rows dd {
+.fr-stat span {
+    font-size: 13.5px;
     color: var(--ink);
 }
 
-/* ---------- closing ---------- */
-
-.fd-closing {
-    margin-top: 14px;
+.fr-stats .fr-note {
+    flex-basis: 100%;
+    margin-top: 0;
 }
 
-.fd-closing h2 {
-    font-size: clamp(26px, 5vw, 34px);
+.fr-detail-link {
+    margin-top: 16px;
+}
+
+/* ---------- panel ---------- */
+
+.fr-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 22px 26px 16px;
+    padding: 20px 18px 26px;
+    background: var(--clay);
+    border: 3px solid var(--ink);
+    border-radius: 28px;
+    box-shadow: var(--slab);
+}
+
+.fr-id {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fr-id img {
+    width: 88px;
+    height: 88px;
+    flex: none;
+    object-fit: cover;
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 3px 5px 0 var(--ink);
+}
+
+.fr-name {
+    font-size: 22px;
     font-weight: 800;
     font-stretch: 112%;
     line-height: 1.1;
-    letter-spacing: -0.01em;
-    text-wrap: balance;
+    margin-bottom: 5px;
 }
 
-.fd-closing h2 + p {
-    margin-top: 8px;
-    font-size: 19px;
-}
-
-.fd-foot {
-    margin-top: 26px !important;
+.fr-id-role {
     font-family: var(--font-mono), ui-monospace, monospace;
     font-size: 12.5px;
-    letter-spacing: 0.1em;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--steel);
+    margin-top: 0 !important;
+}
+
+.fr-status {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: #1b2228;
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 11px 13px 8px;
+    box-shadow: inset 0 5px 0 #000000;
+}
+
+.fr-lamp {
+    width: 16px;
+    height: 16px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--ok);
+    border: 2px solid #000000;
+    box-shadow:
+        inset 3px 3px 0 rgba(255, 255, 255, 0.6),
+        inset -2px -3px 0 rgba(0, 0, 0, 0.28);
+}
+
+.fr-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: 3px;
+}
+
+.fr-body {
+    font-size: 15px;
+    line-height: 1.55;
+    padding: 18px 14px 14px;
+}
+
+.fr-proof {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.fr-proof-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--clay);
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 9px 11px 14px;
+    box-shadow:
+        inset 0 3px 0 var(--clay-hi),
+        inset 0 -6px 0 var(--clay-lo);
+}
+
+.fr-proof-tile b {
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 1.05;
+}
+
+.fr-proof-tile span {
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+.fr-h {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 2px;
+}
+
+.fr-rows + .fr-h {
+    margin-top: 18px;
+}
+
+.fr-rows li {
+    display: flex;
+    flex-direction: column;
+    padding: 9px 0;
+    border-top: 2px dashed rgba(18, 23, 28, 0.22);
+}
+
+.fr-rows li:first-child {
+    border-top: 0;
+}
+
+.fr-rows b {
+    font-size: 15.5px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.fr-row-dates {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--steel);
 }
 
-/* ---------- wider screens ---------- */
+.fr-lead {
+    font-size: 16px;
+    color: var(--ink);
+}
 
-@media (min-width: 640px) {
-    .fd-col {
-        padding: 48px 24px 72px;
-        gap: 26px;
-    }
+.fr-way {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: var(--clay);
+    border: 3px solid var(--ink);
+    border-radius: 14px;
+    padding: 9px 12px 14px;
+    margin: 10px 0;
+    box-shadow:
+        inset 0 3px 0 var(--clay-hi),
+        inset 0 -6px 0 var(--clay-lo);
+}
 
-    .fd-proof {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.fr-way b {
+    font-size: 15.5px;
+    font-weight: 700;
+}
 
-    .fd-tile {
-        padding: 18px 16px 20px;
-    }
+.fr-way span {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--ink);
+}
 
-    .fd-figure {
-        font-size: 34px;
-    }
+.fr-tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: 3px;
+}
 
-    .fd-tile-label {
-        font-size: 14px;
-    }
+/* ---------- the frame proper (wide and tall enough windows) ---------- */
 
-    .fd-story {
+@media (min-width: 1100px) and (min-height: 660px) {
+    .fr {
         flex-direction: row;
-        align-items: flex-start;
-        gap: 26px;
+        height: 100vh;
+        overflow: hidden;
     }
 
-    .fd-ways {
-        grid-template-columns: repeat(3, 1fr);
+    .fr-stage {
+        flex: 1;
+        min-width: 0;
+        justify-content: space-between;
+        padding: 26px 32px 32px 28px;
     }
 
-    .fd-rows > div {
-        grid-template-columns: 190px 1fr;
-        gap: 16px;
-        align-items: baseline;
+    .fr-title {
+        margin-top: 0;
+        align-self: flex-start;
+        max-width: min(540px, 60%);
+    }
+
+    .fr-tiles {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .fr-tile {
+        min-height: 92px;
+        justify-content: space-between;
+    }
+
+    .fr-detail {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 16px);
+        width: min(600px, 100%);
+        max-height: calc(100vh - 450px);
+        z-index: 2;
+    }
+
+    .fr-panel {
+        width: 400px;
+        flex: none;
+        margin: 16px 26px 28px 0;
+        min-height: 0;
+    }
+
+    .fr-body {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        scrollbar-width: thin;
     }
 }
 
-/* Desktop: the column moves right so the figure in the hangar stays in
-   view, and the contact keys become a rail on the left edge. */
-@media (min-width: 1180px) {
-    .fd-col {
-        margin: 0 6vw 0 auto;
-        max-width: 780px;
-        padding-top: 9vh;
+/* An open project needs the room: the headline slab drops its second line. */
+@media (min-width: 1100px) and (min-height: 660px) {
+    .has-open .fr-title p {
+        display: none;
+    }
+}
+
+/* Short windows: the headline alone, so the figure in the hangar stays in view.
+   An open project takes the headline's place. */
+@media (min-width: 1100px) and (min-height: 660px) and (max-height: 800px) {
+    .fr-title p {
+        display: none;
     }
 
-    .fd-rail {
-        position: fixed;
-        left: 26px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        padding: 14px 12px 16px;
-        background: var(--paper);
-        border: 3px solid var(--ink);
-        border-radius: 18px;
-        box-shadow:
-            inset 0 3px 0 #ffffff,
-            inset 0 -5px 0 rgba(18, 23, 28, 0.09),
-            5px 6px 0 var(--ink);
+    .has-open .fr-title {
+        visibility: hidden;
+    }
+
+    .fr-detail {
+        max-height: calc(100vh - 215px);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .fd-key,
-    .fd-round {
+    .fr-key,
+    .fr-tile {
         transition: none;
     }
-}
-
-/* =====================================================================
-   Looks under review (pick one, then the other gets deleted).
-   Default is "clay". Add ?look=photo or ?look=both to the address to compare.
-   ===================================================================== */
-
-/* ---------- look: clay (clay cards on a quiet ground; the photo is a band at the top) ---------- */
-
-[data-look="clay"] .fd {
-    background: #d6dfe0;
-}
-
-[data-look="clay"] .fd-scene {
-    position: absolute;
-    inset: 0 0 auto 0;
-    height: 38vh;
-    min-height: 260px;
-    background-position: 30% 58%;
-    border-bottom: 3px solid var(--ink);
-}
-
-[data-look="clay"] .fd-col {
-    padding-top: calc(max(38vh, 260px) - 44px);
-}
-
-@media (min-width: 1180px) {
-    [data-look="clay"] .fd-scene {
-        height: 58vh;
-        min-height: 420px;
-        background-position: 50% 64%;
-    }
-
-    [data-look="clay"] .fd-col {
-        padding-top: calc(max(58vh, 420px) - 250px);
-    }
-}
-
-/* ---------- look: photo (full photo behind; flat, quiet panels) ---------- */
-
-[data-look="photo"] .fd-card,
-[data-look="photo"] .fd-rail {
-    border: 0;
-    border-radius: 12px;
-    background: rgba(250, 249, 245, 0.96);
-    box-shadow: 0 10px 30px rgba(10, 16, 22, 0.28);
-}
-
-[data-look="photo"] .fd-earlier {
-    background: rgba(236, 234, 228, 0.96);
-}
-
-[data-look="photo"] .fd-plate {
-    background: rgba(18, 23, 28, 0.88);
-    border: 0;
-    box-shadow: none;
-}
-
-[data-look="photo"] .fd-key,
-[data-look="photo"] .fd-round {
-    border-width: 1.5px;
-    box-shadow: none;
-    transform: none;
-}
-
-[data-look="photo"] .fd-key:hover,
-[data-look="photo"] .fd-round:hover {
-    background: var(--mist);
-}
-
-[data-look="photo"] .fd-key-signal,
-[data-look="photo"] .fd-key-signal:hover {
-    background: var(--signal);
-}
-
-[data-look="photo"] .fd-chip,
-[data-look="photo"] .fd-stat,
-[data-look="photo"] .fd-way {
-    border-width: 1px;
-    box-shadow: none;
-}
-
-[data-look="photo"] .fd-portrait {
-    border: 0;
-    box-shadow: none;
 }

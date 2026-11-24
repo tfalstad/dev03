@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import {
-    closing,
     contact,
     cv,
     frame,
@@ -80,7 +79,7 @@ export default function Frame() {
     const [openId, setOpenId] = useState<string | null>(null);
     const open = builds.find((b) => b.id === openId) || null;
 
-    // A link such as /frame#talespin or /frame#cv opens that project or tab.
+    // A link such as /#talespin or /#cv opens that project or tab.
     useEffect(() => {
         const hash = window.location.hash.slice(1).toLowerCase();
         if (!hash) return;
@@ -91,7 +90,7 @@ export default function Frame() {
 
     return (
         <div className="fr">
-            <div className="fr-stage">
+            <div className={`fr-stage${open ? " has-open" : ""}`}>
                 <div className="fr-scene" aria-hidden="true" />
 
                 <header className="fr-slab fr-title">
@@ -111,20 +110,22 @@ export default function Frame() {
                                     Close
                                 </button>
                             </div>
-                            {open.body.map((p) => (
-                                <p key={p}>{p}</p>
-                            ))}
-                            {open.stats.length > 0 && (
-                                <div className="fr-stats">
-                                    {open.stats.map((s) => (
-                                        <div key={s.label} className="fr-stat">
-                                            <b>{s.figure}</b>
-                                            <span>{s.label}</span>
-                                        </div>
-                                    ))}
-                                    {open.statsNote && <p className="fr-note">{open.statsNote}</p>}
-                                </div>
-                            )}
+                            <div className="fr-well fr-detail-body">
+                                {open.body.map((p) => (
+                                    <p key={p}>{p}</p>
+                                ))}
+                                {open.stats.length > 0 && (
+                                    <div className="fr-stats">
+                                        {open.stats.map((s) => (
+                                            <div key={s.label} className="fr-stat">
+                                                <b>{s.figure}</b>
+                                                <span>{s.label}</span>
+                                            </div>
+                                        ))}
+                                        {open.statsNote && <p className="fr-note">{open.statsNote}</p>}
+                                    </div>
+                                )}
+                            </div>
                             {open.link && (
                                 <a className="fr-key fr-key-small fr-detail-link" href={open.link.href} target={open.link.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
                                     {open.link.label}
@@ -176,7 +177,7 @@ export default function Frame() {
                     ))}
                 </div>
 
-                <div className="fr-body" role="tabpanel">
+                <div className="fr-body fr-well" role="tabpanel">
                     {tab === "profile" && (
                         <>
                             <div className="fr-proof">
@@ -245,7 +246,6 @@ export default function Frame() {
                         LinkedIn
                     </a>
                 </div>
-                <p className="fr-foot">{closing.location}</p>
             </aside>
         </div>
     );

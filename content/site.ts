@@ -34,7 +34,6 @@ export const proof = [
 ];
 
 export const story = {
-    plate: "The short version",
     paragraphs: [
         "I got my start in the music industry the year file-sharing blew up. Within a decade, half the jobs in that business were gone. Watching an industry get caught flat-footed by technology taught me the thing I have built my career on: being unprepared is the real threat.",
         "Since then I have built learning products for places where being unprepared costs the most: intelligence agencies, hospitals and global enterprises.",
@@ -45,7 +44,6 @@ export const story = {
 };
 
 export const work = {
-    plate: "Selected work",
     items: [
         {
             tag: "2019 – 2024",
@@ -90,11 +88,9 @@ export const work = {
             link: { href: "https://mixta.ai", label: "Visit mixta.ai" },
         },
     ],
-    earlier: "Earlier, I served as fractional Chief Product Officer to 25+ clients including Siemens, UCLA Health and Red Bull, and as Director of Product Marketing at Electronic Arts.",
 };
 
 export const together = {
-    plate: "Working together",
     intro: "I take a small number of advisory engagements alongside my role at Mixta. The best fit is a company with deep domain expertise that needs a credible learning product.",
     ways: [
         {
@@ -115,8 +111,6 @@ export const together = {
 };
 
 export const workshop = {
-    plate: "Workshop",
-    intro: "I build with AI every day. These are the projects on my own bench.",
     items: [
         {
             title: "AMIGUS",
@@ -140,7 +134,6 @@ export const workshop = {
 };
 
 export const research = {
-    plate: "Research and teaching",
     rows: [
         {
             what: "Principal Investigator",
@@ -173,13 +166,8 @@ export const research = {
     ],
 };
 
-export const closing = {
-    headline: "Building a learning product for the AI era?",
-    body: "I am glad to compare notes.",
-    location: "Kansas | Works remote",
-};
 
-// ---------- The framed layout (/frame) ----------
+// ---------- Labels for the frame ----------
 // The stage shows the things I have built. The right panel is the CV.
 
 export const frame = {
