@@ -142,10 +142,19 @@ export const workshop = {
         {
             title: "Adaptable Human",
             status: "Concept",
-            summary: "A career assistant that brings labor market data to workers.",
-            art: { src: "/images/art/adaptable-human.jpg", fit: "cover", bg: "#2c4a63" },
-            shots: [],
-            body: ["A career assistant that brings labor market data and a virtual career counselor directly to workers."],
+            summary: "A lifetime career coach and advocate for every worker.",
+            art: { src: "/images/art/adaptable-human.jpg", fit: "cover", bg: "#e9e9e7" },
+            shots: [
+                { src: "/images/adaptable-human-home.jpg", alt: "Adaptable Human home page design: Lifetime Career Coach and Advocate" },
+                { src: "/images/adaptable-human-assessment.jpg", alt: "Phone designs for the career assessment, which asks about a worker's job, goals and interests" },
+                { src: "/images/adaptable-human-paths.jpg", alt: "Phone designs showing career options at three distances: closest match, more of a pivot, try something new" },
+            ],
+            body: [
+                "Adaptable Human is a concept for an AI career coach and advocate that stays with a worker for life. It gives every worker the career insight that has traditionally been available only to top recruiters.",
+                "A short assessment of goals, interests and current work produces a personal skills profile in seconds. The profile is built on the US Department of Labor's O*NET taxonomy, which covers 1,000+ occupations and the skills each one needs.",
+                "The coach then suggests career paths at three distances (closest match, more of a pivot, try something new) and compares them on requirements, salary and demand. Each path links to the training that leads to it, and the advocate answers plain questions such as “Am I being paid fairly for my job?”",
+                "I designed it for Kansas, where employers report a labor shortage while tens of thousands of workers are unemployed or underemployed. It is meant to work alongside existing workforce programs and to serve people from seventh grade through retirement.",
+            ],
             href: null,
         },
     ],
