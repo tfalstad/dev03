@@ -22,6 +22,7 @@ type Build = {
     group: "work" | "personal";
     summary: string;
     art: { src: string; fit: string; bg: string };
+    shot: null | { src: string; alt: string };
     role: string;
     body: string[];
     stats: { figure: string; label: string }[];
@@ -39,6 +40,7 @@ const builds: Build[] = [
         group: "work" as const,
         summary: w.summary,
         art: w.art,
+        shot: null,
         role: w.title === "Creative Technologies" ? `${w.role} at Creative Technologies` : w.role,
         body: w.body,
         stats: w.stats,
@@ -52,6 +54,7 @@ const builds: Build[] = [
         group: "personal" as const,
         summary: i.summary,
         art: i.art,
+        shot: i.shot,
         role: "Personal project",
         body: [i.body],
         stats: [],
@@ -119,6 +122,7 @@ export default function Frame() {
                                 </button>
                             </div>
                             <div className="fr-well fr-detail-body">
+                                {open.shot && <img className="fr-shot" src={open.shot.src} alt={open.shot.alt} />}
                                 {open.body.map((p) => (
                                     <p key={p}>{p}</p>
                                 ))}

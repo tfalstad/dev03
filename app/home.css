@@ -661,6 +661,14 @@
     margin: 4px 0 6px;
 }
 
+.fr-shot {
+    display: block;
+    width: 100%;
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
 .fr-row-link {
     color: var(--blue);
     font-weight: 500;
