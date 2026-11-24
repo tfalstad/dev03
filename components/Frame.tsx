@@ -227,6 +227,7 @@ export default function Frame() {
                                 ))}
                             </ul>
                             <h3 className="fr-h">{speaking.label}</h3>
+                            <img className="fr-photo" src="/images/speaking.jpg" alt={speaking.photoAlt} loading="lazy" />
                             <ul className="fr-rows">
                                 {speaking.rows.map((r) => (
                                     <li key={r.where}>

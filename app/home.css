@@ -651,6 +651,16 @@
     padding-right: 3px;
 }
 
+.fr-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 7 / 4;
+    object-fit: cover;
+    border: 3px solid var(--ink);
+    border-radius: 12px;
+    margin: 4px 0 6px;
+}
+
 .fr-row-link {
     color: var(--blue);
     font-weight: 500;

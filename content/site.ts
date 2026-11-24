@@ -34,7 +34,7 @@ export const proof = [
 ];
 
 export const story = {
-    portraitAlt: "Painted portrait of Travis Falstad in front of fireworks",
+    portraitAlt: "Travis Falstad speaking on a conference panel",
 };
 
 export const work = {
@@ -184,8 +184,10 @@ export const research = {
 // Talks on AI for industry audiences.
 export const speaking = {
     label: "Speaking",
+    photoAlt: "Travis Falstad speaking on stage at a conference",
     rows: [
         { when: "2026", where: "Maryland Workers' Compensation Educational Association conference" },
+        { when: "2026", where: "American Wire Producers Association meeting" },
         { when: "2025", where: "Oklahoma public transit conference" },
         { when: "2025", where: "Composite Can and Tube Institute annual meeting" },
     ],
