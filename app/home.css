@@ -261,6 +261,20 @@
     gap: 12px;
 }
 
+/* Personal projects light up violet (from the hangar's shadows). Work stays blue. */
+.fr [data-group="personal"] {
+    --blue: #5d4a9c;
+    --blue-hi: #8f7fc9;
+    --blue-lo: #3d2f6e;
+}
+
+.fr-group .fr-plate {
+    box-shadow:
+        inset 0 3px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -5px 0 #000000,
+        3px 5px 0 var(--blue);
+}
+
 .fr-groups {
     display: flex;
     flex-direction: column;

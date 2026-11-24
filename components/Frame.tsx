@@ -107,7 +107,7 @@ export default function Frame() {
 
                 <section className="fr-dock" aria-label={frame.dockLabel}>
                     {open && (
-                        <article className="fr-slab fr-detail">
+                        <article className="fr-slab fr-detail" data-group={open.group}>
                             <div className="fr-detail-head">
                                 <div>
                                     <h2>{open.title}</h2>
@@ -142,7 +142,7 @@ export default function Frame() {
                     )}
                     <div className="fr-groups">
                         {groups.map((g) => (
-                            <div key={g.id} className="fr-group">
+                            <div key={g.id} className="fr-group" data-group={g.id}>
                                 <span className="fr-plate">{g.label}</span>
                                 <div className="fr-tiles">
                                     {builds.filter((b) => b.group === g.id).map((b) => (
