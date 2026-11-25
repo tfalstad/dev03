@@ -670,6 +670,10 @@
     cursor: zoom-in;
 }
 
+.fr-shot-link {
+    cursor: pointer;
+}
+
 .fr-shot img {
     display: block;
     width: 100%;

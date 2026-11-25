@@ -22,7 +22,7 @@ type Build = {
     group: "work" | "personal";
     summary: string;
     art: { src: string; fit: string; bg: string };
-    shots: { src: string; alt: string }[];
+    shots: { src: string; alt: string; href?: string }[];
     role: string;
     body: string[];
     stats: { figure: string; label: string }[];
@@ -126,7 +126,7 @@ export default function Frame() {
                                     <p key={p}>{p}</p>
                                 ))}
                                 {open.shots.map((s) => (
-                                    <a key={s.src} className="fr-shot" href={s.src} target="_blank" rel="noopener noreferrer">
+                                    <a key={s.src} className={s.href ? "fr-shot fr-shot-link" : "fr-shot"} href={s.href ?? s.src} target="_blank" rel="noopener noreferrer">
                                         <img src={s.src} alt={s.alt} loading="lazy" />
                                     </a>
                                 ))}

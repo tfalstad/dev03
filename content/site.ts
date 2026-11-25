@@ -48,7 +48,7 @@ export const work = {
                 { src: "/images/talespin-authoring.jpg", alt: "The Talespin authoring tool: a dialogue list, a 3D scene with two characters and a timeline of gestures and emotions" },
                 { src: "/images/talespin-lesson.jpg", alt: "The end of a Talespin lesson: an AI character seated in an office with a Lesson Completed message" },
                 { src: "/images/talespin-module.jpg", alt: "Cover of the Talespin module Effective Behavioral Feedback" },
-            ] as { src: string; alt: string }[],
+            ] as { src: string; alt: string; href?: string }[],
             role: "VP of Product",
             body: [
                 "At Talespin I created the Product and Learning Experience Design team: game and learning designers, data scientists, narrative designers, 3D artists, subject matter experts and UX researchers.",
@@ -68,9 +68,9 @@ export const work = {
             summary: "Training that teaches intelligence analysts to catch their own cognitive biases.",
             art: { src: "/images/art/sirius.png", fit: "contain", bg: "#ffffff" },
             shots: [
-                { src: "/images/sirius-hbr.jpg", alt: "Harvard Business Review, October 2015: How a Video Game Helped People Make Better Decisions" },
-                { src: "/images/sirius-wired.jpg", alt: "Wired, November 2011: U.S. Intelligence Will Train Super-Sleuths With Videogames" },
-            ],
+                { src: "/images/sirius-hbr.jpg", href: "https://hbr.org/2015/10/how-a-video-game-helped-people-make-better-decisions", alt: "Harvard Business Review, October 2015: How a Video Game Helped People Make Better Decisions" },
+                { src: "/images/sirius-wired.jpg", href: "https://www.wired.com/2011/11/iarpa-video-games/", alt: "Wired, November 2011: U.S. Intelligence Will Train Super-Sleuths With Videogames" },
+            ] as { src: string; alt: string; href?: string }[],
             role: "Production lead",
             body: [
                 "I led a 60-person team that built a new way to train intelligence analysts to catch their own cognitive biases.",
@@ -131,7 +131,7 @@ export const workshop = {
             shots: [
                 { src: "/images/amigus-workbench.jpg", alt: "The AMIGUS Workbench, shown with sample cards" },
                 { src: "/images/amigus-blueprint.jpg", alt: "Blueprint of how AMIGUS is put together: mail, calendar and recordings feed machines that propose actions, and approved work is kept in a vault" },
-            ] as { src: string; alt: string }[],
+            ] as { src: string; alt: string; href?: string }[],
             body: ["A personal operating system in which AI agents triage my email, write up my meetings and keep my week in order."],
             href: "/amigus" as string | null,
         },
