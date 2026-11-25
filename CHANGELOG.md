@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-25
+### Redesign goes live
+- The page is now a frame: a stage (hangar photo, headline, project tiles) beside a panel with the CV, advisory work and contact keys.
+- Six project tiles in two groups (work in blue, personal projects in violet), each with artwork, a summary and a card that opens on the stage.
+- Links such as `/#talespin`, `/#amigus` and `/#cv` open that project or tab.
+- New portrait, speaking history and a link to the PwC study.
+
 ## 2026-11-23
 ### Redesign (branch `redesign-2026`)
 - Replaced the three-card link page with a full personal site: positioning line, proof points, selected work, advisory, workshop, research and contact.
