@@ -44,6 +44,11 @@ export const work = {
             title: "Talespin",
             summary: "A no-code platform for practicing hard conversations with AI characters.",
             art: { src: "/images/art/talespin.jpg", fit: "cover", bg: "#8fa3ad" },
+            shots: [
+                { src: "/images/talespin-authoring.jpg", alt: "The Talespin authoring tool: a dialogue list, a 3D scene with two characters and a timeline of gestures and emotions" },
+                { src: "/images/talespin-lesson.jpg", alt: "The end of a Talespin lesson: an AI character seated in an office with a Lesson Completed message" },
+                { src: "/images/talespin-module.jpg", alt: "Cover of the Talespin module Effective Behavioral Feedback" },
+            ] as { src: string; alt: string }[],
             role: "VP of Product",
             body: [
                 "At Talespin I created the Product and Learning Experience Design team: game and learning designers, data scientists, narrative designers, 3D artists, subject matter experts and UX researchers.",
@@ -62,6 +67,7 @@ export const work = {
             title: "Creative Technologies",
             summary: "Training that teaches intelligence analysts to catch their own cognitive biases.",
             art: { src: "/images/art/sirius.png", fit: "contain", bg: "#ffffff" },
+            shots: [],
             role: "Production lead",
             body: [
                 "I led a 60-person team that built a new way to train intelligence analysts to catch their own cognitive biases.",
@@ -79,6 +85,7 @@ export const work = {
             title: "Mixta",
             summary: "Authoring tools that let a domain expert create adaptive, measurable training.",
             art: { src: "/images/art/mixta.png", fit: "contain", bg: "#292f38" },
+            shots: [],
             role: "Cofounder and Chief Product Officer",
             body: [
                 "I lead product at Mixta and served as Principal Investigator on an NSF SBIR titled “Education and Training for an AI-Integrated Future.”",

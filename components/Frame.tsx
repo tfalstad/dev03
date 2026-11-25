@@ -40,7 +40,7 @@ const builds: Build[] = [
         group: "work" as const,
         summary: w.summary,
         art: w.art,
-        shots: [],
+        shots: w.shots,
         role: w.title === "Creative Technologies" ? `${w.role} at Creative Technologies` : w.role,
         body: w.body,
         stats: w.stats,
