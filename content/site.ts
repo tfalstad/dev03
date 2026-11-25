@@ -67,7 +67,10 @@ export const work = {
             title: "Creative Technologies",
             summary: "Training that teaches intelligence analysts to catch their own cognitive biases.",
             art: { src: "/images/art/sirius.png", fit: "contain", bg: "#ffffff" },
-            shots: [],
+            shots: [
+                { src: "/images/sirius-hbr.jpg", alt: "Harvard Business Review, October 2015: How a Video Game Helped People Make Better Decisions" },
+                { src: "/images/sirius-wired.jpg", alt: "Wired, November 2011: U.S. Intelligence Will Train Super-Sleuths With Videogames" },
+            ],
             role: "Production lead",
             body: [
                 "I led a 60-person team that built a new way to train intelligence analysts to catch their own cognitive biases.",
