@@ -22,7 +22,7 @@ type Build = {
     group: "work" | "personal";
     summary: string;
     art: { src: string; fit: string; bg: string };
-    shots: { src: string; alt: string; href?: string }[];
+    shots: { src: string; alt: string; href?: string; source?: string }[];
     role: string;
     body: string[];
     stats: { figure: string; label: string }[];
@@ -125,11 +125,25 @@ export default function Frame() {
                                 {open.body.map((p) => (
                                     <p key={p}>{p}</p>
                                 ))}
-                                {open.shots.map((s) => (
-                                    <a key={s.src} className={s.href ? "fr-shot fr-shot-link" : "fr-shot"} href={s.href ?? s.src} target="_blank" rel="noopener noreferrer">
-                                        <img src={s.src} alt={s.alt} loading="lazy" />
-                                    </a>
-                                ))}
+                                {open.shots.some((s) => s.source) && (
+                                    <div className="fr-press">
+                                        {open.shots
+                                            .filter((s) => s.source)
+                                            .map((s) => (
+                                                <a key={s.src} className="fr-shot fr-shot-link" href={s.href ?? s.src} target="_blank" rel="noopener noreferrer">
+                                                    <span className="fr-press-source">{s.source}</span>
+                                                    <img src={s.src} alt={s.alt} loading="lazy" />
+                                                </a>
+                                            ))}
+                                    </div>
+                                )}
+                                {open.shots
+                                    .filter((s) => !s.source)
+                                    .map((s) => (
+                                        <a key={s.src} className="fr-shot" href={s.src} target="_blank" rel="noopener noreferrer">
+                                            <img src={s.src} alt={s.alt} loading="lazy" />
+                                        </a>
+                                    ))}
                                 {open.stats.length > 0 && (
                                     <div className="fr-stats">
                                         {open.stats.map((s) => (
