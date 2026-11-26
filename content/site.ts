@@ -140,7 +140,11 @@ export const workshop = {
             status: "In development",
             summary: "A strategy game whose rival AI learned through self-play.",
             art: { src: "/images/art/far-meridian.jpg", fit: "cover", bg: "#020d12" },
-            shots: [],
+            shots: [
+                { src: "/images/far-meridian-base.jpg", alt: "A Far Meridian match during the truce: a base with reactors, refineries and a sensor array beside a field of yellow aurite, with the build menu and truce countdown in the sidebar" },
+                { src: "/images/far-meridian-units.jpg", alt: "Close view of a command base, two battle tanks and three troopers near an aurite deposit" },
+                { src: "/images/far-meridian-title.jpg", alt: "The Far Meridian title screen: how to play, a service record against each difficulty and the match settings" },
+            ] as { src: string; alt: string; href?: string; source?: string }[],
             body: [
                 "Far Meridian is a real-time strategy game that runs in a browser. You land a base on a volcanic moon, mine aurite to pay for an army, and fight up to three rival factions that are also at war with each other.",
                 "A match grows from scouting into full war: tanks and howitzers on the ground, starships and dropships overhead, missile silos and the batteries that shoot missiles down. Mountains erupt and throw flaming rocks across the map. Apocalypse mode opens with a truce, and every faction marches the moment it ends.",
