@@ -88,7 +88,11 @@ export const work = {
             title: "Mixta",
             summary: "Authoring tools that let a domain expert create adaptive, measurable training.",
             art: { src: "/images/art/mixta.png", fit: "contain", bg: "#292f38" },
-            shots: [],
+            shots: [
+                { src: "/images/mixta-designer.jpg", alt: "The Mixta Blueprint Designer: an author describes a course in conversation and the tool proposes steps, skills and a skill level" },
+                { src: "/images/mixta-conversation.jpg", alt: "A learner practicing a difficult conversation with an AI character in Mixta, with objectives tracked at the top" },
+                { src: "/images/mixta-library.jpg", alt: "The Mixta module library: three conversation modules with attempts, learners and scores" },
+            ] as { src: string; alt: string; href?: string; source?: string }[],
             role: "Cofounder and Chief Product Officer",
             body: [
                 "I lead product at Mixta and served as Principal Investigator on an NSF SBIR titled “Education and Training for an AI-Integrated Future.”",
