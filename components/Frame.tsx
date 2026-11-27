@@ -158,7 +158,7 @@ export default function Frame() {
     useEffect(() => {
         const hash = window.location.hash.slice(1).toLowerCase();
         if (!hash) return;
-        if (hash in frame.tabs || hash === "contact") setTab(hash as Pane);
+        if (hash in frame.tabs || (hash === "contact" && contact.formLive)) setTab(hash as Pane);
         const hit = builds.find((b) => b.title.toLowerCase().replace(/\s+/g, "-") === hash);
         if (hit) setOpenId(hit.id);
     }, []);
@@ -366,10 +366,17 @@ export default function Frame() {
                 )}
 
                 <div className="fr-tools">
-                    <button className={`fr-key fr-key-signal${tab === "contact" ? " is-on" : ""}`} aria-expanded={tab === "contact"} onClick={() => setTab(tab === "contact" ? null : "contact")}>
-                        <MailIcon />
-                        Email
-                    </button>
+                    {contact.formLive ? (
+                        <button className={`fr-key fr-key-signal${tab === "contact" ? " is-on" : ""}`} aria-expanded={tab === "contact"} onClick={() => setTab(tab === "contact" ? null : "contact")}>
+                            <MailIcon />
+                            Email
+                        </button>
+                    ) : (
+                        <a className="fr-key fr-key-signal" href={`mailto:${contact.email}`}>
+                            <MailIcon />
+                            Email
+                        </a>
+                    )}
                     <a className="fr-key" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon />
                         LinkedIn

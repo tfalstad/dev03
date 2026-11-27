@@ -2,6 +2,10 @@
 // Edit the text between the quotes and save. The layout picks it up.
 
 export const contact = {
+    // The Email key opens the contact form once formLive is true (delivery must be set up in Cloudflare first).
+    // Until then it opens a normal email to this address. Remove the address when the form goes live.
+    formLive: false,
+    email: "travis@falstad.dev",
     calendar: "https://calendar.app.google/zRMChYvy5bevvemw9",
     linkedin: "https://www.linkedin.com/in/tfalstad/",
 };
