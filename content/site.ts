@@ -11,7 +11,7 @@ export const hero = {
     name: "Travis Falstad",
     roles: ["Cofounder and product at Mixta", "NSF Principal Investigator"],
     headline: "Thanks for stopping by.",
-    lede: "I’ve been building new products in the learning space for 20 years.",
+    lede: "I’ve been building new products in the learning space for 20 years. I’m currently pursuing a mix of entrepreneurial ventures and consulting work. Reach out if you’d like to catch up, discuss a project, or chat.",
 };
 
 export const proof = [

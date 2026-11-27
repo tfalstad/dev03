@@ -87,7 +87,7 @@ const groups = [
 type Tab = "cv" | "advisory";
 
 export default function Frame() {
-    const [tab, setTab] = useState<Tab>("cv");
+    const [tab, setTab] = useState<Tab | null>(null);
     const [openId, setOpenId] = useState<string | null>(null);
     const open = builds.find((b) => b.id === openId) || null;
 
@@ -192,7 +192,7 @@ export default function Frame() {
                 </section>
             </div>
 
-            <aside className="fr-panel">
+            <aside className={`fr-panel${tab ? "" : " is-closed"}`}>
                 <div className="fr-id">
                     <img src="/images/portrait.jpg" alt={story.portraitAlt} width={84} height={84} />
                     <div>
@@ -210,12 +210,13 @@ export default function Frame() {
 
                 <div className="fr-tabs" role="tablist">
                     {(Object.keys(frame.tabs) as Tab[]).map((t) => (
-                        <button key={t} role="tab" aria-selected={tab === t} className={`fr-key fr-tab${tab === t ? " is-on" : ""}`} onClick={() => setTab(t)}>
+                        <button key={t} role="tab" aria-selected={tab === t} className={`fr-key fr-tab${tab === t ? " is-on" : ""}`} aria-expanded={tab === t} onClick={() => setTab(tab === t ? null : t)}>
                             {frame.tabs[t]}
                         </button>
                     ))}
                 </div>
 
+                {tab && (
                 <div className="fr-body fr-well" role="tabpanel">
                     {tab === "cv" && (
                         <>
@@ -276,6 +277,7 @@ export default function Frame() {
                         </>
                     )}
                 </div>
+                )}
 
                 <div className="fr-tools">
                     <a className="fr-key fr-key-signal" href={`mailto:${contact.email}`}>

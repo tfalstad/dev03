@@ -754,7 +754,13 @@
         overflow: hidden;
     }
 
+    /* The photo runs behind the panel as well as the stage. */
+    .fr {
+        position: relative;
+    }
+
     .fr-stage {
+        position: static;
         flex: 1;
         min-width: 0;
         justify-content: space-between;
@@ -795,6 +801,11 @@
         flex: none;
         margin: 16px 26px 28px 0;
         min-height: 0;
+    }
+
+    /* With no tab open the panel is only as tall as what it holds. */
+    .fr-panel.is-closed {
+        align-self: flex-start;
     }
 
     .fr-body {
