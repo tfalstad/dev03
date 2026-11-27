@@ -954,7 +954,7 @@
         position: absolute;
         left: 0;
         bottom: calc(100% + 16px);
-        width: min(600px, 100%);
+        width: min(750px, 100%);
         max-height: calc(100vh - 400px);
         z-index: 2;
     }
