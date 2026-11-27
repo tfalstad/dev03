@@ -1002,6 +1002,47 @@
     }
 }
 
+/* Narrower desktop windows: six tiles in one row get cramped, so the two groups stack.
+   Opening a project folds the tiles down to a single row of name chips to give the card room. */
+@media (min-width: 1100px) and (max-width: 1399px) and (min-height: 660px) {
+    .fr-stage:not(.has-open) .fr-groups {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .has-open .fr-tile-art,
+    .has-open .fr-tile-sum {
+        display: none;
+    }
+
+    .has-open .fr-groups {
+        gap: 16px;
+    }
+
+    .has-open .fr-tiles {
+        gap: 10px;
+    }
+
+    .has-open .fr-tile {
+        padding: 9px 9px 15px;
+    }
+
+    .has-open .fr-tile-name {
+        font-size: 15px;
+    }
+
+    .fr-detail {
+        max-height: calc(100vh - 250px);
+    }
+}
+
+/* Stacked rows with summaries need a tall window. */
+@media (min-width: 1100px) and (max-width: 1399px) and (min-height: 660px) and (max-height: 979px) {
+    .fr-tile-sum {
+        display: none;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .fr-key,
     .fr-tile {
