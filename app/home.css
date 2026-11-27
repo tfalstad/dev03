@@ -227,8 +227,43 @@
 
 .fr-title {
     position: relative;
-    margin-top: 150px;
+    margin: 150px 14px 18px;
     padding: 24px 26px 34px;
+}
+
+/* A string of lights around the headline slab. */
+.fr-lights {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.fr-lights-wire {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 2.5;
+}
+
+.fr-lights-cap {
+    fill: var(--ink);
+}
+
+.fr-lights-bulb {
+    stroke: var(--ink);
+    stroke-width: 2;
+    animation: fr-twinkle 4.2s ease-in-out infinite;
+}
+
+@keyframes fr-twinkle {
+    0%,
+    100% {
+        filter: brightness(0.62);
+    }
+    50% {
+        filter: brightness(1.2) drop-shadow(0 0 7px currentColor);
+    }
 }
 
 .fr-title h1 {
@@ -727,7 +762,7 @@
     }
 
     .fr-title {
-        margin-top: 0;
+        margin: 14px 0 0 10px;
         align-self: flex-start;
         max-width: min(640px, 70%);
     }
@@ -797,5 +832,9 @@
     .fr-key,
     .fr-tile {
         transition: none;
+    }
+
+    .fr-lights-bulb {
+        animation: none;
     }
 }

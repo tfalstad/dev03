@@ -1,5 +1,6 @@
 "use client";
 
+import StringLights from "./StringLights";
 import { useEffect, useState } from "react";
 import {
     contact,
@@ -105,6 +106,7 @@ export default function Frame() {
                 <div className="fr-scene" aria-hidden="true" />
 
                 <header className="fr-slab fr-title">
+                    <StringLights />
                     <h1>{hero.headline}</h1>
                     <p>{hero.lede}</p>
                 </header>
