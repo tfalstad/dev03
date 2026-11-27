@@ -251,18 +251,53 @@
 }
 
 .fr-lights-bulb {
+    fill: currentColor;
+    color: #d9432a;
     stroke: var(--ink);
     stroke-width: 2;
-    animation: fr-twinkle 4.2s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center top;
+    animation:
+        fr-hue 12s linear infinite,
+        fr-pulse 2.2s ease-in-out infinite;
 }
 
-@keyframes fr-twinkle {
+/* Each bulb walks through the five colours, starting at a different one. */
+@keyframes fr-hue {
+    0%,
+    16% {
+        color: #d9432a;
+    }
+    20%,
+    36% {
+        color: #f2b632;
+    }
+    40%,
+    56% {
+        color: #4fa3bd;
+    }
+    60%,
+    76% {
+        color: #8f7fc9;
+    }
+    80%,
+    96% {
+        color: #5fae6a;
+    }
+    100% {
+        color: #d9432a;
+    }
+}
+
+@keyframes fr-pulse {
     0%,
     100% {
-        filter: brightness(0.62);
+        transform: scale(0.86);
+        filter: brightness(0.7);
     }
     50% {
-        filter: brightness(1.2) drop-shadow(0 0 7px currentColor);
+        transform: scale(1.14);
+        filter: brightness(1.25) drop-shadow(0 0 8px currentColor);
     }
 }
 

@@ -9,7 +9,8 @@ const PAD = 18; // how far the drawing reaches outside the parent
 const INSET = 9; // the wire runs this far inside the drawing's edge
 const RADIUS = 30;
 const SPACING = 52;
-const COLORS = ["#d9432a", "#f2b632", "#4fa3bd", "#8f7fc9", "#5fae6a"];
+// The resting colours, used when motion is turned off. The moving colours are in home.css.
+const COLORS = ["#d9432a", "#5fae6a", "#8f7fc9", "#4fa3bd", "#f2b632"];
 
 type Pt = { x: number; y: number; nx: number; ny: number };
 
@@ -93,7 +94,7 @@ export default function StringLights() {
                                     cy={10}
                                     rx={5}
                                     ry={7}
-                                    style={{ fill: COLORS[i % COLORS.length], color: COLORS[i % COLORS.length], animationDelay: `${((i * 7) % 10) * -0.42}s` }}
+                                    style={{ color: COLORS[i % COLORS.length], animationDelay: `${(i % 5) * -2.4}s, ${((i * 7) % 10) * -0.22}s` }}
                                 />
                             </g>
                         );
