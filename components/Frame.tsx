@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import {
     about,
     contact,
+    contactForm,
     cv,
     frame,
     hero,
@@ -89,9 +90,67 @@ const groups = [
 ];
 
 type Tab = "about" | "cv" | "advisory";
+type Pane = Tab | "contact";
+
+// The form behind the Email key. It posts to /api/contact, which emails Travis.
+function ContactForm() {
+    const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
+    const [opened] = useState(() => Date.now());
+
+    async function submit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        const f = new FormData(e.currentTarget);
+        setState("sending");
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({
+                    name: f.get("name"),
+                    email: f.get("email"),
+                    message: f.get("message"),
+                    website: f.get("website"),
+                    elapsed: Date.now() - opened,
+                }),
+            });
+            const out = await res.json().catch(() => null);
+            setState(res.ok && out?.ok ? "sent" : "failed");
+        } catch {
+            setState("failed");
+        }
+    }
+
+    if (state === "sent") return <p className="fr-lead" role="status">{contactForm.sent}</p>;
+
+    return (
+        <form className="fr-form" onSubmit={submit}>
+            <p className="fr-lead">{contactForm.intro}</p>
+            <label>
+                <span>{contactForm.name}</span>
+                <input name="name" type="text" autoComplete="name" required maxLength={100} />
+            </label>
+            <label>
+                <span>{contactForm.email}</span>
+                <input name="email" type="email" autoComplete="email" required maxLength={200} />
+            </label>
+            <label>
+                <span>{contactForm.message}</span>
+                <textarea name="message" rows={6} required maxLength={5000} />
+            </label>
+            <label className="fr-form-trap" aria-hidden="true">
+                <span>Website</span>
+                <input name="website" type="text" tabIndex={-1} autoComplete="off" />
+            </label>
+            {state === "failed" && <p className="fr-form-error" role="alert">{contactForm.failed}</p>}
+            <button className="fr-key fr-key-signal" type="submit" disabled={state === "sending"}>
+                {state === "sending" ? contactForm.sending : contactForm.send}
+            </button>
+        </form>
+    );
+}
 
 export default function Frame() {
-    const [tab, setTab] = useState<Tab | null>(null);
+    const [tab, setTab] = useState<Pane | null>(null);
     const [openId, setOpenId] = useState<string | null>(null);
     const open = builds.find((b) => b.id === openId) || null;
 
@@ -99,7 +158,7 @@ export default function Frame() {
     useEffect(() => {
         const hash = window.location.hash.slice(1).toLowerCase();
         if (!hash) return;
-        if (hash in frame.tabs) setTab(hash as Tab);
+        if (hash in frame.tabs || hash === "contact") setTab(hash as Pane);
         const hit = builds.find((b) => b.title.toLowerCase().replace(/\s+/g, "-") === hash);
         if (hit) setOpenId(hit.id);
     }, []);
@@ -228,6 +287,7 @@ export default function Frame() {
 
                 {tab && (
                 <div className="fr-body fr-well" role="tabpanel">
+                    {tab === "contact" && <ContactForm />}
                     {tab === "about" && (
                         <>
                             {about.parts.map((part) => (
@@ -306,10 +366,10 @@ export default function Frame() {
                 )}
 
                 <div className="fr-tools">
-                    <a className="fr-key fr-key-signal" href={`mailto:${contact.email}`}>
+                    <button className={`fr-key fr-key-signal${tab === "contact" ? " is-on" : ""}`} aria-expanded={tab === "contact"} onClick={() => setTab(tab === "contact" ? null : "contact")}>
                         <MailIcon />
                         Email
-                    </a>
+                    </button>
                     <a className="fr-key" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
                         <LinkedInIcon />
                         LinkedIn

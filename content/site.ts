@@ -2,7 +2,6 @@
 // Edit the text between the quotes and save. The layout picks it up.
 
 export const contact = {
-    email: "travis@falstad.dev",
     calendar: "https://calendar.app.google/zRMChYvy5bevvemw9",
     linkedin: "https://www.linkedin.com/in/tfalstad/",
 };
@@ -250,6 +249,18 @@ export const frame = {
     personalLabel: "Personal projects",
     status: "Open to select advisory work",
     tabs: { about: "About", cv: "CV", advisory: "Advisory" },
+};
+
+// The contact form behind the Email key. Messages are delivered by email.
+export const contactForm = {
+    intro: "Send me a note and I’ll reply by email.",
+    name: "Your name",
+    email: "Your email",
+    message: "Message",
+    send: "Send",
+    sending: "Sending",
+    sent: "Thanks. Your message is on its way.",
+    failed: "That didn’t send. Please try again, or message me on LinkedIn.",
 };
 
 // How I got here. Shown in the About tab.
