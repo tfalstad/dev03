@@ -362,7 +362,7 @@
 .fr-tiles {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 14px;
+    gap: 24px 22px;
     width: 100%;
 }
 
@@ -410,6 +410,66 @@
         5px 7px 0 var(--ink);
     transition: transform 70ms ease-out, box-shadow 70ms ease-out;
     cursor: pointer;
+    position: relative;
+}
+
+/* A neon tube around each tile, in its group's colour. It hums, and now and then it stutters. */
+.fr-tile::after {
+    content: "";
+    position: absolute;
+    inset: -9px;
+    border: 2.5px solid var(--blue-hi);
+    border-radius: 25px;
+    box-shadow:
+        0 0 5px var(--blue-hi),
+        0 0 16px var(--blue),
+        inset 0 0 5px var(--blue-hi),
+        inset 0 0 12px var(--blue);
+    pointer-events: none;
+    animation: fr-neon 9s linear infinite;
+}
+
+.fr-tile:nth-child(2)::after {
+    animation-delay: -3.1s;
+}
+
+.fr-tile:nth-child(3)::after {
+    animation-delay: -6.4s;
+}
+
+.fr-group[data-group="personal"] .fr-tile::after {
+    animation-duration: 11s;
+}
+
+@keyframes fr-neon {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.78;
+    }
+    90% {
+        opacity: 1;
+    }
+    91% {
+        opacity: 0.25;
+    }
+    92% {
+        opacity: 0.95;
+    }
+    94% {
+        opacity: 0.35;
+    }
+    95% {
+        opacity: 1;
+    }
 }
 
 .fr-tile:hover {
@@ -881,6 +941,10 @@
     }
 
     .fr-lights-bulb {
+        animation: none;
+    }
+
+    .fr-tile::after {
         animation: none;
     }
 }
