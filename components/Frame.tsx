@@ -3,6 +3,7 @@
 import StringLights from "./StringLights";
 import { useEffect, useState } from "react";
 import {
+    about,
     contact,
     cv,
     frame,
@@ -87,7 +88,7 @@ const groups = [
     { id: "personal" as const, label: frame.personalLabel },
 ];
 
-type Tab = "cv" | "advisory";
+type Tab = "about" | "cv" | "advisory";
 
 export default function Frame() {
     const [tab, setTab] = useState<Tab | null>(null);
@@ -227,6 +228,17 @@ export default function Frame() {
 
                 {tab && (
                 <div className="fr-body fr-well" role="tabpanel">
+                    {tab === "about" && (
+                        <>
+                            {about.parts.map((part) => (
+                                <div key={part.text} className="fr-about-part">
+                                    <p>{part.text}</p>
+                                    {part.photo && <img className="fr-photo" src={part.photo.src} alt={part.photo.alt} loading="lazy" />}
+                                </div>
+                            ))}
+                            <p className="fr-note">{about.caption}</p>
+                        </>
+                    )}
                     {tab === "cv" && (
                         <>
                             <div className="fr-proof">

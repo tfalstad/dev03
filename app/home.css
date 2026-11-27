@@ -598,9 +598,18 @@
         inset -2px -3px 0 rgba(0, 0, 0, 0.28);
 }
 
+.fr-about-part p {
+    margin: 0 0 10px;
+}
+
+.fr-about-part .fr-photo {
+    aspect-ratio: 3 / 2;
+    margin: 0 0 14px;
+}
+
 .fr-tabs {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding-right: 3px;
 }

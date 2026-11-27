@@ -249,7 +249,26 @@ export const frame = {
     workLabel: "Work",
     personalLabel: "Personal projects",
     status: "Open to select advisory work",
-    tabs: { cv: "CV", advisory: "Advisory" },
+    tabs: { about: "About", cv: "CV", advisory: "Advisory" },
+};
+
+// How I got here. Shown in the About tab.
+export const about = {
+    parts: [
+        {
+            text: "I started my career in animation at Hanna-Barbera two weeks before an acquisition led to the dismissal of most of the staff. I arrived at the lot to see Los Angeles police officers guiding away some of the original artists from Scooby-Doo and The Jetsons for smashing the lobby display cases that held their artwork.",
+            photo: { src: "/images/about-animation.jpg", alt: "A young Travis Falstad in sunglasses beside a costumed cartoon character at an outdoor event" },
+        },
+        {
+            text: "My next job was at a record label a few months before Napster and file sharing arrived. I have seen the same story repeat in every industry I have worked in since.",
+            photo: { src: "/images/about-records.jpg", alt: "A young Travis Falstad holding up a card in front of the Capitol Records building in Hollywood" },
+        },
+        {
+            text: "The pace of change in how we work has been accelerating for decades, and there is no reason to assume it will slow down. That is why I build products that help people learn new skills.",
+            photo: null as null | { src: string; alt: string },
+        },
+    ],
+    caption: "Pictured: my early enthusiasm for the entertainment industry.",
 };
 
 export const cv = {
