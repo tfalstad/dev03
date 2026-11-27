@@ -1010,9 +1010,16 @@
         gap: 18px;
     }
 
-    .has-open .fr-tile-art,
     .has-open .fr-tile-sum {
         display: none;
+    }
+
+    .has-open .fr-tile-art {
+        height: 50px;
+    }
+
+    .has-open .fr-tile-art img[style*="contain"] {
+        padding: 6px 8px;
     }
 
     .has-open .fr-groups {
@@ -1029,6 +1036,17 @@
 
     .has-open .fr-tile-name {
         font-size: 15px;
+    }
+
+    .fr-detail {
+        max-height: calc(100vh - 310px);
+    }
+}
+
+/* Short and narrow: the folded tiles drop their pictures too. */
+@media (min-width: 1100px) and (max-width: 1399px) and (min-height: 660px) and (max-height: 800px) {
+    .has-open .fr-tile-art {
+        display: none;
     }
 
     .fr-detail {
