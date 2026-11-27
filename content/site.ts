@@ -222,6 +222,7 @@ export const speaking = {
     rows: [
         { when: "2026", where: "Maryland Workers' Compensation Educational Association conference" },
         { when: "2026", where: "American Wire Producers Association meeting" },
+        { when: "2025", where: "GIFT Expert Workshop on scalability and intelligent tutoring systems" },
         { when: "2025", where: "Oklahoma public transit conference" },
         { when: "2025", where: "Composite Can and Tube Institute annual meeting" },
     ],
