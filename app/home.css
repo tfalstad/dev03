@@ -456,10 +456,44 @@
     color: var(--steel);
 }
 
+/* A project card is temporary, so it does not get the clay finish of the fixed pieces.
+   It is a dark, flat screen with a neon tube in its group's colour, matching the lit tile. */
 .fr-detail {
-    padding: 18px 18px 26px;
+    padding: 18px 18px 22px;
     max-height: 70vh;
     overflow-y: auto;
+    background: var(--ink);
+    border: 2.5px solid var(--blue-hi);
+    box-shadow:
+        0 0 6px var(--blue-hi),
+        0 0 22px var(--blue),
+        inset 0 0 10px rgba(255, 255, 255, 0.08),
+        0 18px 44px rgba(0, 0, 0, 0.5);
+    animation: fr-card-glow 5s ease-in-out infinite;
+}
+
+@keyframes fr-card-glow {
+    50% {
+        box-shadow:
+            0 0 10px var(--blue-hi),
+            0 0 38px var(--blue),
+            inset 0 0 10px rgba(255, 255, 255, 0.08),
+            0 18px 44px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.fr-detail h2 {
+    color: var(--paper);
+}
+
+.fr-detail .fr-role {
+    color: var(--blue-hi);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fr-detail {
+        animation: none;
+    }
 }
 
 .fr-detail-head {
