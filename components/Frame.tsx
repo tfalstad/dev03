@@ -28,6 +28,7 @@ type Build = {
     body: string[];
     stats: { figure: string; label: string }[];
     statsNote: string;
+    quote: null | { text: string; by: string; href: string };
     link: null | { href: string; label: string };
 };
 
@@ -46,6 +47,7 @@ const builds: Build[] = [
         body: w.body,
         stats: w.stats,
         statsNote: w.statsNote,
+        quote: w.quote,
         link: w.link,
     })),
     ...workshop.items.map((i) => ({
@@ -60,6 +62,7 @@ const builds: Build[] = [
         body: i.body,
         stats: [],
         statsNote: "",
+        quote: null,
         link: i.href ? { href: i.href, label: `About ${i.title}` } : null,
     })),
 ];
@@ -127,6 +130,12 @@ export default function Frame() {
                                 {open.body.map((p) => (
                                     <p key={p}>{p}</p>
                                 ))}
+                                {open.quote && (
+                                    <blockquote className="fr-quote">
+                                        <p>“{open.quote.text}”</p>
+                                        <a className="fr-row-link" href={open.quote.href} target="_blank" rel="noopener noreferrer">{open.quote.by}</a>
+                                    </blockquote>
+                                )}
                                 {open.shots.some((s) => s.source) && (
                                     <div className="fr-press">
                                         {open.shots
@@ -235,6 +244,11 @@ export default function Frame() {
                                         <span className="fr-row-dates">{e.dates}</span>
                                         <b>{e.title}</b>
                                         <span>{e.org}</span>
+                                        {e.note && (e.href ? (
+                                            <a className="fr-row-link fr-row-note" href={e.href} target="_blank" rel="noopener noreferrer">{e.note}</a>
+                                        ) : (
+                                            <span className="fr-row-note">{e.note}</span>
+                                        ))}
                                     </li>
                                 ))}
                             </ul>

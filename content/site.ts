@@ -53,6 +53,7 @@ export const work = {
             body: [
                 "At Talespin I created the Product and Learning Experience Design team: game and learning designers, data scientists, narrative designers, 3D artists, subject matter experts and UX researchers.",
                 "We used a learning engineering approach to design every part of the platform: the web-based authoring tool, the content player, the analytics dashboard and the skills and competency model. We also designed more than 100 interactive learning experiences.",
+                "With Pearson we piloted “Where’d Everybody Go?”, a 30-module immersive learning world about leading a decentralized workforce.",
                 "Cornerstone OnDemand acquired the company in 2024, and the platform now supports 140M users.",
             ],
             stats: [
@@ -60,6 +61,11 @@ export const work = {
                 { figure: "275%", label: "more skill confidence" },
             ],
             statsNote: "From the largest soft-skills simulation study to date.",
+            quote: {
+                text: "With Talespin you can use GenAI to build character-based content in minutes to hours, instead of days to weeks.",
+                by: "Josh Bersin on the Cornerstone acquisition (2024)",
+                href: "https://joshbersin.com/2024/03/cornerstone-acquires-talespin-ai-meets-metaverse-in-corporate-learning/",
+            } as null | { text: string; by: string; href: string },
             link: null as null | { href: string; label: string },
         },
         {
@@ -68,6 +74,7 @@ export const work = {
             summary: "Training that teaches intelligence analysts to catch their own cognitive biases.",
             art: { src: "/images/art/sirius.png", fit: "contain", bg: "#ffffff" },
             shots: [
+                { src: "/images/sirius-nyt.jpg", source: "The New York Times (2016)", href: "https://www.nytimes.com/2016/09/18/opinion/sunday/the-difference-between-rationality-and-intelligence.html", alt: "The New York Times, September 2016: The Difference Between Rationality and Intelligence" },
                 { src: "/images/sirius-hbr.jpg", source: "Harvard Business Review (2015)", href: "https://hbr.org/2015/10/how-a-video-game-helped-people-make-better-decisions", alt: "Harvard Business Review, October 2015: How a Video Game Helped People Make Better Decisions" },
                 { src: "/images/sirius-wired.jpg", source: "Wired (2011)", href: "https://www.wired.com/2011/11/iarpa-video-games/", alt: "Wired, November 2011: U.S. Intelligence Will Train Super-Sleuths With Videogames" },
             ] as { src: string; alt: string; href?: string; source?: string }[],
@@ -77,10 +84,11 @@ export const work = {
                 "Thirteen federal agencies adopted it, and more than a million people have trained with it. Researchers at Johns Hopkins and Carnegie Mellon validated the results in 25+ published studies.",
             ],
             stats: [
-                { figure: "30%", label: "faster learning" },
-                { figure: "40%", label: "better retention" },
+                { figure: "31%", label: "immediate improvement" },
+                { figure: "23%", label: "enduring improvement" },
             ],
-            statsNote: "",
+            statsNote: "After one hour of play, across four years of research.",
+            quote: null,
             link: null,
         },
         {
@@ -100,6 +108,7 @@ export const work = {
             ],
             stats: [],
             statsNote: "",
+            quote: null,
             link: { href: "https://mixta.ai", label: "Visit mixta.ai" },
         },
     ],
@@ -248,10 +257,17 @@ export const cv = {
         { title: "Cofounder and Chief Product Officer", org: "Mixta", dates: "2024 – now" },
         { title: "Product Advisor", org: "Symptom Media and others", dates: "2024 – now" },
         { title: "VP of Product", org: "Talespin", dates: "2019 – 2024" },
-        { title: "Chief Product Officer (fractional)", org: "Uncanny Ridge", dates: "2014 – 2019" },
-        { title: "Director of Product", org: "Creative Technologies", dates: "2010 – 2014" },
+        {
+            title: "Chief Product Officer (fractional)",
+            org: "Uncanny Ridge",
+            dates: "2016 – 2019",
+            note: "Built RelayCars, a VR car showroom with more than 1M downloads and one of the first 10 titles on Magic Leap One.",
+            href: "https://www.digitaltrends.com/cars/relaycars-virtual-reality-car-buying-news-details/",
+        },
+        { title: "VP of Product", org: "Backcode", dates: "2013 – 2016" },
+        { title: "Director of Product", org: "Creative Technologies", dates: "2010 – 2013" },
         { title: "Director of Product Marketing", org: "Electronic Arts", dates: "2008 – 2009" },
-    ],
+    ] as { title: string; org: string; dates: string; note?: string; href?: string }[],
     experienceLabel: "Experience",
     researchLabel: "Research and teaching",
 };
